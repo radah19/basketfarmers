@@ -56,11 +56,12 @@ function scr_check_fruit(argument0){
 	//Check Type
 	switch(ds_grid_get(global.item_index, argument0, fruit_item_stat.stat_type)){
 		case "Fruit":
-			var temp_buffingfruit_extra = 0;
-			if(global.status_timer_buffingfruit > 0) temp_buffingfruit_extra += 2;
-			if(global.status_timer_rottenbuffingfruit > 0) temp_buffingfruit_extra -= 2;
+			var temp_buffingfruit_extra = 1;
+			var temp_rottenbuffingfruit_extra = 1;
+			if(global.status_timer_buffingfruit > 0) temp_buffingfruit_extra = 1.35;
+			if(global.status_timer_rottenbuffingfruit > 0) temp_rottenbuffingfruit_extra = 0.65;
 			
-			point_check = point_check + (global.item_fruitbasket * 2) + temp_buffingfruit_extra;
+			point_check = round((point_check + (global.item_fruitbasket * 2)) * temp_buffingfruit_extra * temp_rottenbuffingfruit_extra);
 			break;	
 		case "Vegetable":
 			point_check = point_check + (global.item_vegetablebasket * 2);
