@@ -52,7 +52,7 @@ function scr_item_list(){
 	scr_additemindex(fruit_item_index.apple,  "Apple", "Gives 2 Points", "Fruit", 2, B_GRAV, B_ACC, false, false, 0, 1);
 	scr_additemindex(fruit_item_index.banana,  "Banana", "Gives 3 Points, Falls Faster", "Fruit", 3, B_GRAV + 1, B_ACC, false, false, 0, 1);
 	scr_additemindex(fruit_item_index.pear,  "Pear", "Gives 1 Point, Falls Slower", "Fruit", 1, B_GRAV - 1, 0.025, false, false, 0, 1);
-	scr_additemindex(fruit_item_index.watermelon,  "Watermelon", "Gives 4 Points, explodes if it hits the ground", "Fruit", 4, B_GRAV, 0.08, true, false, 0, 2);
+	scr_additemindex(fruit_item_index.watermelon,  "Watermelon", "Gives 4 Points, explodes if it hits the ground", "Fruit", 4, B_GRAV, 0.08, true, false, 0, 3);
 	scr_additemindex(fruit_item_index.pineapple,  "Pineapple", "Gives 6 Points, decreases time on pickup (0.3 seconds)", "Fruit", 6, B_GRAV, B_ACC, false, true, 20, 1);
 	scr_additemindex(fruit_item_index.lemon,  "Lemon", "Gives amount from -2 to 5", "Fruit", "-2 - 5", B_GRAV, B_ACC, false, false, 0, 2);
 	scr_additemindex(fruit_item_index.buffing_fruit,  "Buffing Fruit", "On pickup gives status that increases value of fruits by 35%", "Fruit", 0, B_GRAV, B_ACC, false, false, 0, 3);
@@ -82,17 +82,17 @@ function scr_item_list(){
 	scr_additemindex(fruit_item_index.yellow_pepper, "Yellow Pepper", "Takes 5 Points, decreases time on pickup (0.5 seconds)", "Vegetable", -5, B_GRAV, B_ACC, false, false, 30, -1);
 	scr_additemindex(fruit_item_index.green_pepper, "Green Pepper", "Takes 5 Points, increases time on pickup (0.5 seconds)", "Vegetable", -5, B_GRAV, B_ACC, false, false, -30, 2);
 	scr_additemindex(fruit_item_index.blue_pepper, "Blue Pepper", "Takes 6 Points, increases time on pickup (1.5 seconds)", "Vegetable", -6, B_GRAV + 0.5, B_ACC, false, false, -90, 4);
-	scr_additemindex(fruit_item_index.corn_cob, "Corn Cob", "Gives 4 Points, explodes if it hits the ground", "Vegetable", 4, B_GRAV, 0.09, true, false, 0, 2);
+	scr_additemindex(fruit_item_index.corn_cob, "Corn Cob", "Gives 4 Points, explodes if it hits the ground", "Vegetable", 4, B_GRAV, 0.09, true, false, 0, 3);
 	
 	scr_additemindex(fruit_item_index.screenwarp_mushroom, "Warp Shroom", "Flips screens upside down on Pickup", "Fungus", 2, B_GRAV, B_ACC, false, false, 0, -1);
 	scr_additemindex(fruit_item_index.red_mushroom, "Red Shroom", "Turns screen Red on Pickup", "Fungus", 2, B_GRAV, B_ACC, false, false, 0, -1);
 	scr_additemindex(fruit_item_index.dark_mushroom, "Dark Shroom", "Turns screen dark on Pickup", "Fungus", 2, B_GRAV, B_ACC, false, false, 0, -2);
 	scr_additemindex(fruit_item_index.confusion_mushroom, "Confusion Shroom", "Confuses you", "Fungus", 2, B_GRAV, B_ACC, false, false, 0, -1);
 	scr_additemindex(fruit_item_index.glass_mushroom, "Glass Shroom", "Makes items less visible on Pickup", "Fungus", 2, B_GRAV, B_ACC, false, false, 0, -2);
-	scr_additemindex(fruit_item_index.illusion_mushroom, "Illusion Shroom", "Causes items to have Psuedo Copies around it", "Fungus", 4, B_GRAV, B_ACC, false, false, 0, -3);
+	scr_additemindex(fruit_item_index.illusion_mushroom, "Illusion Shroom", "Causes items to have Psuedo Copies around it", "Fungus", 4, B_GRAV, B_ACC, false, false, 0, -4);
 	scr_additemindex(fruit_item_index.radiation_shroom, "Rad Shroom", "Causes items to seem to grow in size... by a lot", "Fungus", 4, B_GRAV, B_ACC, false, false, 0, -3);
-	scr_additemindex(fruit_item_index.psi_shroom, "Psi Shroom", "Causes you to Hallucinate some Clones", "Fungus", 4, B_GRAV, B_ACC, false, false, 0, -3);
-	scr_additemindex(fruit_item_index.buffing_shroom, "Buffing Shroom", "Causes items to seem to grow in size... by a lot", "Fungus", 4, B_GRAV, B_ACC, false, false, 0, -3);
+	scr_additemindex(fruit_item_index.psi_shroom, "Psi Shroom", "Causes you to Hallucinate some Clones", "Fungus", 4, B_GRAV, B_ACC, false, false, 0, -4);
+	scr_additemindex(fruit_item_index.buffing_shroom, "Buffing Shroom", "On pickup gives status that increases value of mushrooms by 30%", "Fungus", 0, B_GRAV, B_ACC, false, false, 0, 3);
 	
 	scr_additemindex(fruit_item_index.dice, "Dice", "Gives amount from 1 to 6", "Other", "1 - 6", B_GRAV, B_ACC, false, false, 0, 2);
 	scr_additemindex(fruit_item_index.mystery_ball, "Mystery Ball", "Gives amount from -1 to 8", "Other", "-1 - 8", B_GRAV, B_ACC, false, false, 0, 2);
