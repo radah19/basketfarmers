@@ -1,5 +1,6 @@
 image_speed = 0;
 rotate = irandom_range(-20, 20);
+rad_shroom_growth = 1;
 
 list_width = ds_list_size(global.list) - 1;
 random_select = irandom_range(0, list_width);

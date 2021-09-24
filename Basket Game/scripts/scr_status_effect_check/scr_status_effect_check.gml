@@ -106,6 +106,48 @@ function scr_status_effect_check(argument0, argument1, argument2, argument3){
 					ds_list_add(global.status_drawinglist, argument2);
 				}
 				break;
+				
+			case 12:
+				if(global.status_timer_illusionshroom >= 0){
+					global.status_timer_illusionshroom = argument3 - (global.item_strangevial * 20) + (global.item_enhancedtastebuds * 180);
+				} else {
+					global.status_timer_illusionshroom = argument3 - (global.item_strangevial * 20) + (global.item_enhancedtastebuds * 180);
+					ds_list_add(global.status_drawinglist, argument2);
+				}
+				break;
+				
+			case 13:
+				if(global.status_timer_radshroom >= 0){
+					global.status_timer_radshroom = argument3 - (global.item_strangevial * 20) + (global.item_enhancedtastebuds * 180);
+				} else {
+					global.status_timer_radshroom = argument3 - (global.item_strangevial * 20) + (global.item_enhancedtastebuds * 180);
+					ds_list_add(global.status_drawinglist, argument2);
+				}
+				break;
+				
+			case 14:
+				if(global.status_timer_psishroom >= 0){
+					global.status_timer_psishroom = argument3 - (global.item_strangevial * 20) + (global.item_enhancedtastebuds * 180);
+				} else {
+					global.status_timer_psishroom = argument3 - (global.item_strangevial * 20) + (global.item_enhancedtastebuds * 180);
+					ds_list_add(global.status_drawinglist, argument2);
+					
+					obj_player.temp1 = choose(-48, -24, 24, 48);
+					obj_player.temp2 = choose(-48, -24, 24, 48);
+					obj_player.temp3 = choose(-48, -24, 24, 48);
+					
+					for(var i = 0; i < 8; i++) instance_create_depth(irandom_range(0, room_width - sprite_width), 180, 0, obj_wanderingclone);
+				}
+				break;
+				
+			case 15:
+				if(global.status_timer_buffshroom >= 0){
+					global.status_timer_buffshroom = argument3 - (global.item_strangevial * 20) + (global.item_enhancedtastebuds * 180);
+				} else {
+					global.status_timer_buffshroom = argument3 - (global.item_strangevial * 20) + (global.item_enhancedtastebuds * 180);
+					ds_list_add(global.status_drawinglist, argument2);
+				}
+				break;
 		}
 	} else {
 		return false;	

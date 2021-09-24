@@ -135,7 +135,7 @@ if(global.status_timer_confusionmushroom == 0){
 	scr_delete_status_effect(10);
 }
 
-//Red Mushroom
+//Glass Mushroom
 if(global.status_timer_glassmushroom >= 0){
 	global.status_timer_glassmushroom--;
 }
@@ -143,7 +143,46 @@ if(global.status_timer_glassmushroom >= 0){
 if(global.status_timer_glassmushroom == 0){
 	scr_delete_status_effect(11);
 }
+
+//Illusion Mushroom
+if(global.status_timer_illusionshroom >= 0){
+	global.status_timer_illusionshroom--;
 }
+
+if(global.status_timer_illusionshroom == 0){
+	scr_delete_status_effect(12);
+}
+
+//Radiation Mushroom
+if(global.status_timer_radshroom >= 0){
+	global.status_timer_radshroom--;
+}
+
+if(global.status_timer_radshroom == 0){
+	scr_delete_status_effect(13);
+}
+
+//Psi Mushroom
+if(global.status_timer_psishroom >= 0){
+	global.status_timer_psishroom--;
+}
+
+if(global.status_timer_psishroom == 0){
+	scr_delete_status_effect(14);
+}
+
+//Buffing Mushroom
+if(global.status_timer_buffshroom >= 0){
+	global.status_timer_buffshroom--;
+}
+
+if(global.status_timer_buffshroom == 0){
+	scr_delete_status_effect(15);
+}
+
+}
+
+
 
 function scr_delete_status_effect(argument0){
 	for(var i = 0; i < ds_list_size(global.status_drawinglist); i++){

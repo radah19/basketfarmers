@@ -93,6 +93,10 @@ global.status_timer_redmushroom = -1;
 global.status_timer_darkmushroom = -1;
 global.status_timer_confusionmushroom = -1;
 global.status_timer_glassmushroom = -1;
+global.status_timer_illusionshroom = -1;
+global.status_timer_radshroom = -1;
+global.status_timer_psishroom = -1;
+global.status_timer_buffshroom = -1;
 
 //Drawing Popups
 global.popup_y_offset = 0;

@@ -51,6 +51,10 @@ function scr_check_fruit(argument0){
 	scr_status_effect_check(argument0, "Dark Shroom", 9, 180);
 	scr_status_effect_check(argument0, "Confusion Shroom", 10, 180);
 	scr_status_effect_check(argument0, "Glass Shroom", 11, 180);
+	scr_status_effect_check(argument0, "Illusion Shroom", 12, 180);
+	scr_status_effect_check(argument0, "Rad Shroom", 13, 180);
+	scr_status_effect_check(argument0, "Psi Shroom", 14, 180);
+	scr_status_effect_check(argument0, "Buffing Shroom", 15, 180);
 
 	
 	//Check Type
@@ -73,7 +77,10 @@ function scr_check_fruit(argument0){
 			point_check = point_check + (global.item_starfury * 2);
 			break;
 		case "Fungus":
-			point_check = point_check + (global.item_fungusbasket * 4);
+			var temp_buffingshroom_extra = 1;
+			if(global.status_timer_buffshroom > 0) temp_buffingshroom_extra = 1.3;
+		
+			point_check = (point_check + (global.item_fungusbasket * 4)) * temp_buffingshroom_extra;
 			
 			var rando_fungus_clock_roll = irandom_range(1, 100);
 			if((global.item_fungus_clock * 12) >= rando_fungus_clock_roll){
