@@ -121,6 +121,26 @@ function scr_inventory_string_num(argument0, argument1, argument2, argument3, ar
 		case shop_item_index.top:
 			temp = global.item_top;
 			break;
+			
+		case shop_item_index.strange_pill:
+			temp = global.item_strange_pill;
+			break;
+	
+		case shop_item_index.floaty:
+			temp = global.item_floaty;
+			break;
+	
+		case shop_item_index.radiated_compost:
+			temp = global.item_radiated_compost;
+			break;
+	
+		case shop_item_index.watch:
+			temp = global.item_watch;
+			break;
+	
+		case shop_item_index.fungus_clock:
+			temp = global.item_fungus_clock;
+			break;
 	}
 	
 	if(argument4 == 0){

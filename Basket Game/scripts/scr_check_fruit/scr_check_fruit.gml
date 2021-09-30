@@ -36,7 +36,14 @@ function scr_check_fruit(argument0){
 	
 	//Skull
 	if(ds_grid_get(global.item_index, argument0, fruit_item_stat.name) == "Skull"){
-		global.star_gravity_bonus += 0.02;
+		global.fruit_gravity += 0.02;
+	}
+	
+	//Chaos Shroom
+	if(ds_grid_get(global.item_index, argument0, fruit_item_stat.name) == "Chaos Shroom"){
+		global.fruit_gravity += irandom_range(-2, 2);
+		global.fruit_acceleration += random_range(-0.04, 0.04);
+		global.player_speedbonus += irandom_range(-2, 2);
 	}
 	
 	//Status Check	
@@ -80,7 +87,7 @@ function scr_check_fruit(argument0){
 			var temp_buffingshroom_extra = 1;
 			if(global.status_timer_buffshroom > 0) temp_buffingshroom_extra = 1.3;
 		
-			point_check = (point_check + (global.item_fungusbasket * 4)) * temp_buffingshroom_extra;
+			point_check = round((point_check + (global.item_fungusbasket * 4)) * temp_buffingshroom_extra);
 			
 			var rando_fungus_clock_roll = irandom_range(1, 100);
 			if((global.item_fungus_clock * 12) >= rando_fungus_clock_roll){

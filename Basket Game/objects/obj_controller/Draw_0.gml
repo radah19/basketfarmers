@@ -7,7 +7,15 @@ draw_set_font(fn_text);
 //Draw Scores
 draw_sprite_ext(spr_inventory, 0, 0, 200, 1, 1, 0, c_white, 1);
 draw_text(151, 210, global.farmer_cash);
-draw_text(151, 226, global.farmer_score);
+
+if(global.farmer_date > 0){
+	if((global.farmer_date mod 3 == 0)){
+		draw_text(151, 226, "1 Day");
+	} else {
+		draw_text(151, 226, string(4 - (global.farmer_date mod 3)) + "  Days");
+	}
+}
+
 draw_text(237, 210, global.farmer_rent);
 
 //Draw Time

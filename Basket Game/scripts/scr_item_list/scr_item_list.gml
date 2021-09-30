@@ -22,7 +22,7 @@ function scr_item_list(){
 		//Bullet
 		watermelon_piece, kernel, rock_piece, emptynaut,
 		//Mutant
-		merganaut,
+		merganaut, chaos_shroom,
 		
 		total
 	}
@@ -85,18 +85,16 @@ function scr_item_list(){
 	scr_additemindex(fruit_item_index.corn_cob, "Corn Cob", "Gives 4 Points, explodes if it hits the ground", "Vegetable", 4, B_GRAV, 0.09, true, false, 0, 3);
 	
 	scr_additemindex(fruit_item_index.screenwarp_mushroom, "Warp Shroom", "Flips screens upside down on Pickup", "Fungus", 2, B_GRAV, B_ACC, false, false, 0, -1);
-	scr_additemindex(fruit_item_index.red_mushroom, "Red Shroom", "Turns screen Red on Pickup", "Fungus", 2, B_GRAV, B_ACC, false, false, 0, -1);
-	scr_additemindex(fruit_item_index.dark_mushroom, "Dark Shroom", "Turns screen dark on Pickup", "Fungus", 2, B_GRAV, B_ACC, false, false, 0, -2);
+	scr_additemindex(fruit_item_index.red_mushroom, "Red Shroom", "Turns screen Red on Pickup", "Fungus", 2, B_GRAV, B_ACC, false, false, 0, -2);
+	scr_additemindex(fruit_item_index.dark_mushroom, "Dark Shroom", "Turns screen dark on Pickup", "Fungus", 2, B_GRAV, B_ACC, false, false, 0, -3);
 	scr_additemindex(fruit_item_index.confusion_mushroom, "Confusion Shroom", "Confuses you", "Fungus", 2, B_GRAV, B_ACC, false, false, 0, -1);
 	scr_additemindex(fruit_item_index.glass_mushroom, "Glass Shroom", "Makes items less visible on Pickup", "Fungus", 2, B_GRAV, B_ACC, false, false, 0, -2);
-	
-	
 	scr_additemindex(fruit_item_index.illusion_mushroom, "Illusion Shroom", "Causes items to have False Copies around it", "Fungus", 2, B_GRAV, B_ACC, false, false, 0, -4);
 	scr_additemindex(fruit_item_index.radiation_shroom, "Rad Shroom", "Causes items to seem to grow in size... by a lot", "Fungus", 2, B_GRAV, B_ACC, false, false, 0, -3);
 	scr_additemindex(fruit_item_index.psi_shroom, "Psi Shroom", "Causes you to Hallucinate some Clones", "Fungus", 2, B_GRAV, B_ACC, false, false, 0, -4);
 	scr_additemindex(fruit_item_index.buffing_shroom, "Buffing Shroom", "On pickup gives status that increases value of mushrooms by 30%", "Fungus", 0, B_GRAV, B_ACC, false, false, 0, 3);
 	
-	scr_additemindex(fruit_item_index.dice, "Dice", "Gives amount from 1 to 6", "Other", "1 - 6", B_GRAV, B_ACC, false, false, 0, 2);
+	scr_additemindex(fruit_item_index.dice, "Dice", "Gives amount from 1 to 6", "Other", "1 - 6", B_GRAV, B_ACC, false, false, 0, 3);
 	scr_additemindex(fruit_item_index.mystery_ball, "Mystery Ball", "Gives amount from -1 to 8", "Other", "-1 - 8", B_GRAV, B_ACC, false, false, 0, 2);
 	scr_additemindex(fruit_item_index.knife, "Knife", "Shortens time on pickup by 1.5 seconds", "Other", 0, B_GRAV, B_ACC, false, false, 90, -2); 
 	scr_additemindex(fruit_item_index.bomb, "Bomb", "Shortens time on pickup by 2.5 seconds", "Other", 3, B_GRAV, B_ACC, false, false, 150, -3);
@@ -118,4 +116,6 @@ function scr_item_list(){
 	scr_additemindex(fruit_item_index.emptynaut, "Emptynaut", "Just an empty husk", "Other", 0, -3, B_ACC, false, true, 0, 100);
 	
 	scr_additemindex(fruit_item_index.merganaut, "Merganaut", "Explodes when it hits the ground, potentially replicating itself in the process", "Vegetable", 0, -3, B_ACC, true, false, 0, 5);
+	scr_additemindex(fruit_item_index.chaos_shroom, "Chaos Shroom", "On Pickup randomly Increases / Decreases Stats", "Fungus", 10, B_GRAV, B_ACC, false, true, 0, 5);
+
 }

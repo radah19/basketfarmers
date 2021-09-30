@@ -89,7 +89,7 @@ function scr_shopitem_list(){
 	scr_addshopitemindex(shop_item_index.top, "Top", "Bounces around the room, Collecting Pickups for you", 4);
 	global.item_top = 0;
 	
-	scr_addshopitemindex(shop_item_index.strange_pill, "Strange Pill", "Increases Size of all Pickups by 50%", 3);
+	scr_addshopitemindex(shop_item_index.strange_pill, "Strange Pill", "Increases Size of all Pickups by 50%, increases overall Gravity", 3);
 	global.item_strange_pill = 0;
 	
 	scr_addshopitemindex(shop_item_index.floaty, "Floaty", "Decreases Gravity by 1", 2);
@@ -98,7 +98,7 @@ function scr_shopitem_list(){
 	scr_addshopitemindex(shop_item_index.radiated_compost, "Radiated Compost", "Increases overall Gravity and Acceleration, also makes pickups increase in size as they fall", 4);
 	global.item_radiated_compost = 0;
 	
-	scr_addshopitemindex(shop_item_index.watch, "Watch", "Increases max time you have by 1.5 Seconds", 3);
+	scr_addshopitemindex(shop_item_index.watch, "Watch", "Increases max time you have by 1.5 Seconds", 4);
 	global.item_watch = 0;
 	
 	scr_addshopitemindex(shop_item_index.fungus_clock, "Fungus Clock", "Picking up Fungus has a chance to Increase Time", 3);
