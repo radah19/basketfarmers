@@ -32,6 +32,7 @@ function scr_title_menu(){
 	if(keyboard_check_pressed(vk_space)){
 		switch(selection){
 			case 0:
+			
 				options_toggle = 2;
 				selection = 0;
 				break;

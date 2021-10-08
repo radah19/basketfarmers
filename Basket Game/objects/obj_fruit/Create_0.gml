@@ -20,7 +20,7 @@ horizontal_reflect = 0;
 //Special Numbers / Checks
 spe_lemon_number = irandom_range(-2, 5);
 spe_dice_number = irandom_range(1, 6);
-spe_mysteryball_number = irandom_range(-1, 8);
+spe_mysteryball_number = irandom_range(-4, 6);
 
 if(ds_grid_get(global.item_index, what_fruit_am_i, fruit_item_stat.name) == "Boot"){
 	grav = 	global.player_spd;

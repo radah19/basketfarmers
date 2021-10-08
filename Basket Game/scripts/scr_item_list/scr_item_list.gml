@@ -95,7 +95,7 @@ function scr_item_list(){
 	scr_additemindex(fruit_item_index.buffing_shroom, "Buffing Shroom", "On pickup gives status that increases value of mushrooms by 30%", "Fungus", 0, B_GRAV, B_ACC, false, false, 0, 3);
 	
 	scr_additemindex(fruit_item_index.dice, "Dice", "Gives amount from 1 to 6", "Other", "1 - 6", B_GRAV, B_ACC, false, false, 0, 3);
-	scr_additemindex(fruit_item_index.mystery_ball, "Mystery Ball", "Gives amount from -1 to 8", "Other", "-1 - 8", B_GRAV, B_ACC, false, false, 0, 2);
+	scr_additemindex(fruit_item_index.mystery_ball, "Mystery Ball", "Gives amount from -4 to 6", "Other", "-4 - 6", B_GRAV, B_ACC, false, false, 0, 2);
 	scr_additemindex(fruit_item_index.knife, "Knife", "Shortens time on pickup by 1.5 seconds", "Other", 0, B_GRAV, B_ACC, false, false, 90, -2); 
 	scr_additemindex(fruit_item_index.bomb, "Bomb", "Shortens time on pickup by 2.5 seconds", "Other", 3, B_GRAV, B_ACC, false, false, 150, -3);
 	scr_additemindex(fruit_item_index.rock, "Rock", "Gives -5, Explodes on collision with ground, pieces hurt too", "Other", -5, B_GRAV, B_ACC, true, false, 0, -3);
@@ -107,7 +107,7 @@ function scr_item_list(){
 	scr_additemindex(fruit_item_index.golden_coin, "Golden Coin", "Picking up 3 Coins gives 10 free Points!", "Other", 3, B_GRAV, B_ACC, false, false, 0, 100);
 	scr_additemindex(fruit_item_index.leaf, "Leaf", "Gives 1 Point, falls very slowly", "Other", 1, 0.4, 0.01, false, false, 0, 0);
 	scr_additemindex(fruit_item_index.skull, "Skull", "Gives -1, increases overall gravity by 0.02", "Other", -1, B_GRAV, B_ACC, false, false, 0, -2);
-	scr_additemindex(fruit_item_index.little_man, "Little Man", "Shortens Time by 0.25 seconds if not picked up", "Other", 3, B_GRAV, B_ACC, true, false, 0, -2);
+	scr_additemindex(fruit_item_index.little_man, "Little Man", "Shortens Time by 0.25 seconds if not picked up", "Other", 3, B_GRAV, B_ACC, true, false, 0, -3);
 	scr_additemindex(fruit_item_index.smiley_face, "Smiley Face", "Bounces C=", "Other", 1, B_GRAV, B_ACC, false, true, 0, 0);
 	
 	scr_additemindex(fruit_item_index.watermelon_piece, "Watermelon Piece", "", "Fruit", 1, -3, B_ACC, false, false, 0, 100);
