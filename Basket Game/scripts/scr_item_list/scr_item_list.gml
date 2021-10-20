@@ -76,7 +76,7 @@ function scr_item_list(){
 	scr_additemindex(fruit_item_index.rotting_leaf, "Rotting Leaf", "Takes 2 Points, falls very slowly", "Rotten", -2, 0.4, 0.01, false, false, 0, 0);
 	
 	scr_additemindex(fruit_item_index.carrot, "Carrot", "Gives 1 Point", "Vegetable", 1, B_GRAV, B_ACC, false, false, 0, 0);
-	scr_additemindex(fruit_item_index.broccoli, "Broccoli", "Takes 1 Point, increases overall speed by 0.02", "Vegetable", -1, B_GRAV, B_ACC, false, false, 0, 2);
+	scr_additemindex(fruit_item_index.broccoli, "Broccoli", "Takes 1 Point, increases overall speed by 0.03", "Vegetable", -1, B_GRAV, B_ACC, false, false, 0, 2);
 	scr_additemindex(fruit_item_index.eggplant, "Eggplant", "Takes 2 Points, increases time (0.5 seconds)", "Vegetable", -2, B_GRAV, B_ACC, false, false, -30, 2);
 	scr_additemindex(fruit_item_index.red_pepper, "Red Pepper", "Gives 10 Points, decreases time on pickup (1 second)", "Vegetable", 10, B_GRAV, B_ACC, false, false, 60, 1);
 	scr_additemindex(fruit_item_index.yellow_pepper, "Yellow Pepper", "Takes 5 Points, decreases time on pickup (0.5 seconds)", "Vegetable", -5, B_GRAV, B_ACC, false, false, 30, -1);
@@ -106,7 +106,7 @@ function scr_item_list(){
 	scr_additemindex(fruit_item_index.boot, "Boot", "Falls based on Player Speed, not being picked up Subtracts 2 points", "Other", 2, B_GRAV, B_ACC, true, false, 0, -4);
 	scr_additemindex(fruit_item_index.golden_coin, "Golden Coin", "Picking up 3 Coins gives 10 free Points!", "Other", 3, B_GRAV, B_ACC, false, false, 0, 100);
 	scr_additemindex(fruit_item_index.leaf, "Leaf", "Gives 1 Point, falls very slowly", "Other", 1, 0.4, 0.01, false, false, 0, 0);
-	scr_additemindex(fruit_item_index.skull, "Skull", "Gives -1, increases overall gravity by 0.02", "Other", -1, B_GRAV, B_ACC, false, false, 0, -2);
+	scr_additemindex(fruit_item_index.skull, "Skull", "Gives -1, increases overall gravity by 0.04", "Other", -1, B_GRAV, B_ACC, false, false, 0, -2);
 	scr_additemindex(fruit_item_index.little_man, "Little Man", "Shortens Time by 0.25 seconds if not picked up", "Other", 3, B_GRAV, B_ACC, true, false, 0, -3);
 	scr_additemindex(fruit_item_index.smiley_face, "Smiley Face", "Bounces C=", "Other", 1, B_GRAV, B_ACC, false, true, 0, 0);
 	
@@ -116,6 +116,6 @@ function scr_item_list(){
 	scr_additemindex(fruit_item_index.emptynaut, "Emptynaut", "Just an empty husk", "Other", 0, -3, B_ACC, false, true, 0, 100);
 	
 	scr_additemindex(fruit_item_index.merganaut, "Merganaut", "Explodes when it hits the ground, potentially replicating itself in the process", "Vegetable", 0, -3, B_ACC, true, false, 0, 5);
-	scr_additemindex(fruit_item_index.chaos_shroom, "Chaos Shroom", "On Pickup randomly Increases / Decreases Stats", "Fungus", 10, B_GRAV, B_ACC, false, true, 0, 5);
+	scr_additemindex(fruit_item_index.chaos_shroom, "Chaos Shroom", "On Pickup randomly Increases / Decreases Stats", "Fungus", 4, B_GRAV, B_ACC, false, true, 0, 5);
 
 }

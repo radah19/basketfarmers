@@ -1,9 +1,9 @@
 y += grav + global.player_grav;
-grav += acc + global.player_acc;
-
-if(acc < 0){
-	acc = 0.01;	
+var var_acc = acc + global.player_acc;
+if(var_acc < 0){
+	var_acc = 0.01;	
 }
+grav += var_acc
 
 image_xscale += (global.item_radiated_compost * 0.01);
 image_yscale += (global.item_radiated_compost * 0.01);
@@ -13,10 +13,6 @@ image_angle += rotate;
 x += horizontal_reflect;
 var y_min = 200 - abs(ds_grid_get(global.item_index, what_fruit_am_i, fruit_item_stat.stat_grav) * 3);
 var y_max = 200 + abs(ds_grid_get(global.item_index, what_fruit_am_i, fruit_item_stat.stat_grav) * 3);
-
-if(place_meeting(x, y, obj_player)) or (place_meeting(x, y, obj_extracollector)){
-	scr_check_fruit(what_fruit_am_i);
-}
 
 if(can_bounce == true) && (ground_effect != true){
 	if(y > y_min) && (y < y_max){

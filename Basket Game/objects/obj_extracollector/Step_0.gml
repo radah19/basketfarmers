@@ -17,6 +17,11 @@ if(image_index == 1){
 	image_angle += rot;
 }
 
+var inst_fruit = instance_place(x, y, obj_fruit);
+if(inst_fruit != noone){
+	with(inst_fruit) scr_check_fruit(what_fruit_am_i);
+}
+
 if(global.shop_pause == true){
 	instance_destroy();
 }

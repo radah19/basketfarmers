@@ -8,6 +8,11 @@ if(global.shop_pause == false){
 	if(global.player_spd < 0){
 		global.player_spd = 0;	
 	}
+	
+	var inst_fruit = instance_place(x, y, obj_fruit);
+	if(inst_fruit != noone){
+		with(inst_fruit) scr_check_fruit(what_fruit_am_i);
+	}
 
 	if(place_meeting(x + (h_input * global.player_spd), y, obj_wall)){
 		while(!place_meeting(x + sign(h_input * global.player_spd), y, obj_wall)){

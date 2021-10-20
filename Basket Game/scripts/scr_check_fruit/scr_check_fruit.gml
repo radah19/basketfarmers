@@ -16,7 +16,7 @@ function scr_check_fruit(argument0){
 	
 	//Broccoli
 	if(ds_grid_get(global.item_index, argument0, fruit_item_stat.name) == "Broccoli"){
-		global.player_speedbonus += 0.02;
+		global.player_speedbonus += 0.03;
 	}
 	
 	//Dice
@@ -36,7 +36,7 @@ function scr_check_fruit(argument0){
 	
 	//Skull
 	if(ds_grid_get(global.item_index, argument0, fruit_item_stat.name) == "Skull"){
-		global.fruit_gravity += 0.02;
+		global.fruit_gravity += 0.04;
 	}
 	
 	//Chaos Shroom
@@ -44,6 +44,10 @@ function scr_check_fruit(argument0){
 		global.fruit_gravity += irandom_range(-2, 2);
 		global.fruit_acceleration += random_range(-0.04, 0.04);
 		global.player_speedbonus += irandom_range(-2, 2);
+		
+		if(global.fruit_gravity < -5) global.fruit_gravity = -5;
+		if(global.fruit_acceleration < 0) global.fruit_acceleration = 0;
+		if(global.player_speedbonus < 0) global.player_speedbonus = 0;
 	}
 	
 	//Status Check	
@@ -66,6 +70,7 @@ function scr_check_fruit(argument0){
 	
 	//Check Type
 	switch(ds_grid_get(global.item_index, argument0, fruit_item_stat.stat_type)){
+		//Fruits
 		case "Fruit":
 			var temp_buffingfruit_extra = 1;
 			var temp_rottenbuffingfruit_extra = 1;
@@ -74,15 +79,23 @@ function scr_check_fruit(argument0){
 			
 			point_check = round((point_check + (global.item_fruitbasket * 2)) * temp_buffingfruit_extra * temp_rottenbuffingfruit_extra);
 			break;	
+			
+		//Vegetables
 		case "Vegetable":
 			point_check = point_check + (global.item_vegetablebasket * 2);
 			break;
+			
+		//Berries
 		case "Berry":
 			point_check = point_check + scr_berry_check(argument0) + (global.item_berrybasket * 2);
 			break;
+			
+		//Stars
 		case "Star":
 			point_check = point_check + (global.item_starfury * 2);
 			break;
+			
+		//Fungus
 		case "Fungus":
 			var temp_buffingshroom_extra = 1;
 			if(global.status_timer_buffshroom > 0) temp_buffingshroom_extra = 1.3;
@@ -98,9 +111,13 @@ function scr_check_fruit(argument0){
 				}
 			}
 			break;
+			
+		//Rotten
 		case "Rotten":
 			point_check = point_check + (global.item_rottenbasket * 3);
 			break;
+			
+		//Other
 		case "Other":
 			point_check = point_check + (global.item_trashbucket * 2);
 			break;
