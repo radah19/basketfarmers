@@ -56,8 +56,8 @@ if(global.pause == 0){
 		
 	if(global.item_counter != 0) && (global.farmer_counter >= 3){
 		global.farmer_counter = 0;
-		global.farmer_cash += 10 * global.item_counter;
-		global.farmer_score += 10 * global.item_counter;
+		global.farmer_cash += 6 * global.item_counter;
+		global.farmer_score += 6 * global.item_counter;
 	}
 	
 	if(global.tierlist_create == true){

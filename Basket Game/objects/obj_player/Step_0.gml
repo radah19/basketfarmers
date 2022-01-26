@@ -10,9 +10,8 @@ if(global.shop_pause == false){
 	}
 	
 	var inst_fruit = instance_place(x, y, obj_fruit);
-	if(inst_fruit != noone){
-		with(inst_fruit) scr_check_fruit(what_fruit_am_i);
-	}
+	if(inst_fruit != noone) with(inst_fruit) scr_check_fruit(what_fruit_am_i);
+	
 
 	if(place_meeting(x + (h_input * global.player_spd), y, obj_wall)){
 		while(!place_meeting(x + sign(h_input * global.player_spd), y, obj_wall)){
@@ -23,17 +22,13 @@ if(global.shop_pause == false){
 			x += h_input * global.player_spd;
 	}
 
-	if(place_meeting(x, y, obj_flower)){
-		slowdown_bonus_flower = 0.66;
-	} else {
-		slowdown_bonus_flower = 1;	
-	}
+	if(place_meeting(x, y, obj_flower)) slowdown_bonus_flower = 0.66;
+	else slowdown_bonus_flower = 1;	
+
 	
-	if(place_meeting(x, y + 1, obj_yolk)){
-		slowdown_bonus_egg = 0.49;
-	} else {
-		slowdown_bonus_egg = 1;	
-	}
+	if(place_meeting(x, y + 1, obj_yolk)) slowdown_bonus_egg = 0.49;
+	else slowdown_bonus_egg = 1;	
+	
 
 	if(h_input == 0){
 		image_speed = 0;

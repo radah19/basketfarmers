@@ -36,7 +36,7 @@ function scr_check_fruit(argument0){
 	
 	//Skull
 	if(ds_grid_get(global.item_index, argument0, fruit_item_stat.name) == "Skull"){
-		global.fruit_gravity += 0.04;
+		global.fruit_gravity += 0.05;
 	}
 	
 	//Chaos Shroom
@@ -48,6 +48,11 @@ function scr_check_fruit(argument0){
 		if(global.fruit_gravity < -5) global.fruit_gravity = -5;
 		if(global.fruit_acceleration < 0) global.fruit_acceleration = 0;
 		if(global.player_speedbonus < 0) global.player_speedbonus = 0;
+	}
+	
+	//Straight Poison
+	if(ds_grid_get(global.item_index, argument0, fruit_item_stat.name) == "Straight Poison"){
+		heartbeat = stop;
 	}
 	
 	//Status Check	
@@ -70,6 +75,7 @@ function scr_check_fruit(argument0){
 	
 	//Check Type
 	switch(ds_grid_get(global.item_index, argument0, fruit_item_stat.stat_type)){
+		
 		//Fruits
 		case "Fruit":
 			var temp_buffingfruit_extra = 1;
@@ -120,6 +126,10 @@ function scr_check_fruit(argument0){
 		//Other
 		case "Other":
 			point_check = point_check + (global.item_trashbucket * 2);
+			break;
+			
+		//None
+		default:
 			break;
 	}
 	

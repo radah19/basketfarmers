@@ -62,8 +62,8 @@ function scr_characterselect_menu(){
 		switch(selection){
 			case character_index.f_glasscannon:
 				ds_list_add(global.list, fruit_item_index.raspberries);
-				ds_list_add(global.list, fruit_item_index.blackberries);
-				ds_list_add(global.list, fruit_item_index.grape_berries);
+				ds_list_add(global.list, fruit_item_index.knife);
+				ds_list_add(global.list, fruit_item_index.knife);
 				break;
 				
 			case character_index.f_skeleton:
@@ -110,7 +110,7 @@ function scr_characterindex(){
 	ds_grid_clear(global.character_index, 0);
 	
 	scr_addcharacterindex(character_index.f_basic, "Jack", "Basic Character, no Negatives or Positives", 0, 0, 0, fruit_item_index.orange, fruit_item_index.carrot, spr_farmer1, false);
-	scr_addcharacterindex(character_index.f_glasscannon, "Engineer", "Starts with more Speed, Gravity, and Accleration", 1, 0.05, 2, fruit_item_index.orange, fruit_item_index.carrot, spr_farmer2, true);
+	scr_addcharacterindex(character_index.f_glasscannon, "Engineer", "Starts with more Speed, Gravity, and Accleration", 1, 0.05, 2, fruit_item_index.grape_berries, fruit_item_index.blackberries, spr_farmer2, true);
 	scr_addcharacterindex(character_index.f_tank, "Tank", "Starts with less Speed and Less Gravity", -2, 0, -1, fruit_item_index.orange, fruit_item_index.carrot, spr_farmer3, true);
 	scr_addcharacterindex(character_index.f_skeleton, "Skeleton", "Starts with a Random Stuff and some more Speed", 0, 0, 1, irandom_range(1, ds_grid_width(global.item_index) - 1), irandom_range(1, ds_grid_width(global.item_index) - 1), spr_farmer4, true);
 	scr_addcharacterindex(character_index.f_ohgodno, "Ogodno", "Takes Everything :(, gets some more Speed", 0, 0, 1, fruit_item_index.orange, fruit_item_index.carrot, spr_farmer5, false);

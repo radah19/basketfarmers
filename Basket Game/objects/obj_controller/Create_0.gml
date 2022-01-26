@@ -31,7 +31,11 @@ global.shop_temp_timer = 3;
 //Scores
 global.farmer_score = 0;
 global.farmer_cash = 0;
-global.farmer_rent = 100;
+
+rent_arr = [75, 100, 150, 200, 250, 350, 500, 600, 750, 800, 850, 900, 1000];
+rent_counter = 0;
+global.farmer_rent = rent_arr[rent_counter];
+
 global.farmer_max_time = 10 * room_speed;
 global.farmer_total_time = 0;
 global.farmer_date = -1;

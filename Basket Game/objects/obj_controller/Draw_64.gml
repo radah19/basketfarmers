@@ -20,7 +20,14 @@ if(global.game_started == true){
 				if(global.farmer_date mod 3 == 0){
 					if(global.farmer_cash >= global.farmer_rent){
 							global.farmer_cash -= global.farmer_rent;
-							global.farmer_rent += 100;
+							
+							rent_counter++;
+							if(rent_counter < array_length(rent_arr)){
+								global.farmer_rent = rent_arr[rent_counter];
+							} else {
+								global.farmer_rent += 100;
+							}
+							
 					} else {
 							global.farmer_date = -2;
 					}
@@ -45,10 +52,15 @@ if(global.game_started == true){
 			}
 	
 			if(global.shop_pause == false) && (global.player_is_ready == true){
-				var peepeepoopoo = "Press 'Space' When Ready"
+				var peepeepoopoo = "Press 'Space' When Ready";
 				draw_set_color(c_white);
 				draw_set_font(fn_popuptext);
-				draw_text(room_width/2 - (string_length(peepeepoopoo) /2 ) * font_get_size(fn_popuptext)/2, 20, peepeepoopoo);
+				draw_text(room_width/2 - ((string_length(peepeepoopoo)*3)/2), 15, peepeepoopoo);
+				
+				draw_text(10, 5, "Gravity:  " + string(global.player_grav));
+				draw_text(10, 15, "Acceleration:  " + string(global.player_acc));
+				draw_text(10, 25, "Speed:  " + string(global.player_spd));
+				
 		
 				if(global.space_temp_timer > 0){
 					global.space_temp_timer--;	

@@ -9,15 +9,15 @@ function scr_berry_check(argument0){
 	
 		switch(argument0){
 			case fruit_item_index.grape_berries: //Grapes - ACC
-				temp_berry_check = ceil((global.player_acc + temp_base_acc) * 25);
+				temp_berry_check = ceil((global.player_acc + temp_base_acc) * 6.25);
 				break;
 			
 			case fruit_item_index.blackberries: //Blackberries - SPD
-				temp_berry_check = global.player_spd;
+				temp_berry_check = global.player_spd - 3;
 				break;
 			
 			case fruit_item_index.raspberries: //Raspberries - GRAV
-				temp_berry_check = ceil(global.player_grav) + 2;
+				temp_berry_check = ceil(global.player_grav);
 				break;
 		}
 	}
@@ -26,18 +26,18 @@ function scr_berry_check(argument0){
 		switch(argument0){
 			case fruit_item_index.speed_berry:
 				if(global.status_timer_speedstar > 0){
-					temp_berry_check = 10;
+					temp_berry_check = 6;
 				}
 				break;
 				
 			case fruit_item_index.floating_berry:
 				if(global.status_timer_floatstar > 0){
-					temp_berry_check = 8;
+					temp_berry_check = 6;
 				}
 				break; 
 			case fruit_item_index.anvil_berry:
 				if(global.status_timer_anvilstar > 0){
-					temp_berry_check = 13;
+					temp_berry_check = 6;
 				}
 				break;
 		}

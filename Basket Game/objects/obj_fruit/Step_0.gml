@@ -55,8 +55,8 @@ if(ground_effect == true){
 				break;
 				
 			case "Little Man":
-				if(global.farmer_total_time > 15){
-					global.farmer_total_time -= 15;	
+				if(global.farmer_total_time > 30){
+					global.farmer_total_time -= 30;	
 				}
 				instance_destroy();
 				break;
@@ -64,6 +64,12 @@ if(ground_effect == true){
 			case "Merganaut":
 				scr_explode_into_pieces(choose(fruit_item_index.merganaut, fruit_item_index.emptynaut, fruit_item_index.emptynaut, fruit_item_index.emptynaut), 3);
 				break;
+				
+			case "Smoge Nut":
+				var smokey = instance_create_depth(x, y, depth, obj_smoke);
+				smokey.state = "Spawner";
+				break;
+				
 			}
 	}
 }
