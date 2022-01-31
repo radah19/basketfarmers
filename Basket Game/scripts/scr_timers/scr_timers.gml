@@ -180,6 +180,24 @@ if(global.status_timer_buffshroom == 0){
 	scr_delete_status_effect(15);
 }
 
+//Green Juice
+if(global.status_timer_greenjuice >= 0){
+	global.status_timer_greenjuice--;
+}
+
+if(global.status_timer_greenjuice == 0){
+	scr_delete_status_effect(16);
+}
+
+//Buffing Vegetable
+if(global.status_timer_buffveg >= 0){
+	global.status_timer_buffveg--;
+}
+
+if(global.status_timer_buffveg == 0){
+	scr_delete_status_effect(17);
+}
+
 }
 
 

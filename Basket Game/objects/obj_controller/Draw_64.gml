@@ -37,6 +37,14 @@ if(global.game_started == true){
 			if(global.status_timer_darkmushroom > 0){
 				draw_sprite_ext(spr_darkgradient, 0, 0, 0, 300, 4, 0, c_white, 1);
 			}
+			
+			if(global.status_timer_greenjuice > 0){
+				draw_set_color(c_green);
+				draw_set_alpha(0.6);
+				draw_rectangle(-1, -1, room_width + 1, room_height + 1, false);
+				draw_set_color(c_white);
+				draw_set_alpha(1);
+			}
 	
 	
 			if(global.shop_pause == true) && (global.player_is_ready == true){

@@ -101,6 +101,8 @@ global.status_timer_illusionshroom = -1;
 global.status_timer_radshroom = -1;
 global.status_timer_psishroom = -1;
 global.status_timer_buffshroom = -1;
+global.status_timer_greenjuice = -1;
+global.status_timer_buffveg = -1;
 
 //Drawing Popups
 global.popup_y_offset = 0;

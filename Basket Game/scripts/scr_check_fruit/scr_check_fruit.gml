@@ -55,6 +55,29 @@ function scr_check_fruit(argument0){
 		heartbeat = stop;
 	}
 	
+	//Potato
+	if(ds_grid_get(global.item_index, argument0, fruit_item_stat.name) == "Potato") && (global.farmer_total_time > 0){
+		
+		var time_removal_p = irandom_range(-60, 30);
+		
+		if(time_removal_p > 0){
+			if(time_removal_p > global.farmer_total_time){
+				global.farmer_total_time = 0;
+			} else {
+				global.farmer_total_time -= time_removal_p;		
+			}
+		} else if(time_removal_p < 0) {
+			if((time_removal_p * -1) + global.farmer_total_time > global.farmer_max_time + (global.item_watch * 90)){
+				global.farmer_total_time = global.farmer_max_time + (global.item_watch * 90);
+			} else {
+				global.farmer_total_time -= time_removal_p;		
+			}
+		} else {
+			//Do nothing
+		}
+			
+	}
+	
 	//Status Check	
 	scr_status_effect_check(argument0, "Buffing Fruit", 1, 90);
 	scr_status_effect_check(argument0, "Speed Star", 2, 150);
@@ -70,7 +93,9 @@ function scr_check_fruit(argument0){
 	scr_status_effect_check(argument0, "Illusion Shroom", 12, 180);
 	scr_status_effect_check(argument0, "Rad Shroom", 13, 180);
 	scr_status_effect_check(argument0, "Psi Shroom", 14, 180);
-	scr_status_effect_check(argument0, "Buffing Shroom", 15, 180);
+	scr_status_effect_check(argument0, "Buffing Shroom", 15, 90);
+	scr_status_effect_check(argument0, "Green Juice", 16, 7200);
+	scr_status_effect_check(argument0, "Buffing Vegetable", 17, 90);
 
 	
 	//Check Type
@@ -83,12 +108,14 @@ function scr_check_fruit(argument0){
 			if(global.status_timer_buffingfruit > 0) temp_buffingfruit_extra = 1.35;
 			if(global.status_timer_rottenbuffingfruit > 0) temp_rottenbuffingfruit_extra = 0.65;
 			
-			point_check = round((point_check + (global.item_fruitbasket * 2)) * temp_buffingfruit_extra * temp_rottenbuffingfruit_extra);
+			point_check = round( (point_check + (global.item_fruitbasket * 2)) * temp_buffingfruit_extra * temp_rottenbuffingfruit_extra );
 			break;	
 			
 		//Vegetables
 		case "Vegetable":
-			point_check = point_check + (global.item_vegetablebasket * 2);
+			var temp_buffveg_extra = 1;
+			if(global.status_timer_buffveg > 0) temp_buffveg_extra = 1.35;
+			point_check = round( (point_check + (global.item_vegetablebasket * 2)) * temp_buffveg_extra );
 			break;
 			
 		//Berries

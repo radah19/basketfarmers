@@ -148,6 +148,24 @@ function scr_status_effect_check(argument0, argument1, argument2, argument3){
 					ds_list_add(global.status_drawinglist, argument2);
 				}
 				break;
+			
+			case 16:
+				if(global.status_timer_greenjuice >= 0){
+					global.status_timer_greenjuice = argument3 + (global.item_enhancedtastebuds * 180);
+				} else {
+					global.status_timer_greenjuice = argument3 + (global.item_enhancedtastebuds * 180);
+					ds_list_add(global.status_drawinglist, argument2);
+				}
+				break;
+			
+			case 17:
+				if(global.status_timer_buffveg >= 0){
+					global.status_timer_buffveg = argument3 + (global.item_enhancedtastebuds * 180);
+				} else {
+					global.status_timer_buffveg = argument3 + (global.item_enhancedtastebuds * 180);
+					ds_list_add(global.status_drawinglist, argument2);
+				}
+				break;
 		}
 	} else {
 		return false;	

@@ -50,6 +50,10 @@ if(global.item_peppertoken > 0){
 		case "Blue Pepper":
 			grav -= pepper_subtract;
 			break;
+			
+		case "Actual Pepper":
+			grav -= pepper_subtract;
+			break;
 	}
 }
 
