@@ -1,11 +1,6 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_berry_check(argument0){
 	var temp_berry_check = 0;
-	
-	if(argument0 >= 9) or (argument0 <= 11){
-		var temp_base_acc = ds_grid_get(global.item_index, argument0, fruit_item_stat.stat_acc);
-		var temp_base_grav = ds_grid_get(global.item_index, argument0, fruit_item_stat.stat_grav);
+	var temp_base_acc = ds_grid_get(global.item_index, argument0, fruit_item_stat.stat_acc);
 	
 		switch(argument0){
 			case fruit_item_index.grape_berries: //Grapes - ACC
@@ -19,11 +14,15 @@ function scr_berry_check(argument0){
 			case fruit_item_index.raspberries: //Raspberries - GRAV
 				temp_berry_check = ceil(global.player_grav);
 				break;
-		}
-	}
-	
-	if(argument0 >= 15) or (argument0 <= 17){
-		switch(argument0){
+			
+			case fruit_item_index.strawberry: //Strawberry - List Size
+				temp_berry_check = round(ds_list_size(global.list) / 4);
+				break;
+			
+			case fruit_item_index.blueberry: //Blueberry - SPD and GRAV
+				temp_berry_check = round( (global.player_grav + (global.player_spd - 4))/4 );
+				break;
+
 			case fruit_item_index.speed_berry:
 				if(global.status_timer_speedstar > 0){
 					temp_berry_check = 6;
@@ -35,13 +34,17 @@ function scr_berry_check(argument0){
 					temp_berry_check = 6;
 				}
 				break; 
+				
 			case fruit_item_index.anvil_berry:
 				if(global.status_timer_anvilstar > 0){
 					temp_berry_check = 6;
 				}
 				break;
+			
+			case fruit_item_index.rotten_strawberry: 
+				temp_berry_check = round(ds_list_size(global.list) / 5) * -1;
+				break;
 		}
-	}
 	
 	return temp_berry_check;
 }

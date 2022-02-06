@@ -6,7 +6,7 @@ if(global.pause == 0){
 							+ (global.item_brickboots * 2) + (global.star_fury_gravity_bonus * 0.5) - global.item_floaty
 							+ (global.item_radiated_compost) + (global.item_strange_pill * 2.5);
 							
-	global.player_acc = global.fruit_acceleration + (global.item_radiated_compost * 0.035);
+	global.player_acc = global.fruit_acceleration + (global.item_radiated_compost * 0.035) + (global.item_heavyton * 0.025);
 		
 	if(global.farmer_total_time > 0){
 		if(cooldown <= 0){

@@ -83,3 +83,7 @@ if(global.status_timer_glassmushroom > 0){
 } else {
 	image_alpha = 1;	
 }
+
+if(global.status_timer_magnetshroom > 0) && (distance_to_object(obj_player) <= 35){
+	horizontal_reflect = 1 * sign(obj_player.x - x);
+}

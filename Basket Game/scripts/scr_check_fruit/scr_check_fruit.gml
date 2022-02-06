@@ -96,6 +96,7 @@ function scr_check_fruit(argument0){
 	scr_status_effect_check(argument0, "Buffing Shroom", 15, 90);
 	scr_status_effect_check(argument0, "Green Juice", 16, 7200);
 	scr_status_effect_check(argument0, "Buffing Vegetable", 17, 90);
+	scr_status_effect_check(argument0, "Magnet Shroom", 18, 120);
 
 	
 	//Check Type
@@ -136,7 +137,7 @@ function scr_check_fruit(argument0){
 			point_check = round((point_check + (global.item_fungusbasket * 4)) * temp_buffingshroom_extra);
 			
 			var rando_fungus_clock_roll = irandom_range(1, 100);
-			if((global.item_fungus_clock * 12) >= rando_fungus_clock_roll){
+			if((global.item_fungus_clock * 16) >= rando_fungus_clock_roll){ //16% per item
 				if(60 + global.farmer_total_time > global.farmer_max_time + (global.item_watch * 90)){
 					global.farmer_total_time = global.farmer_max_time + (global.item_watch * 90);
 				} else {

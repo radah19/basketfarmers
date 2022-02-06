@@ -82,7 +82,8 @@ surface_free(inventory_surface);
 surface_free(fruit_inventory_surface);
 surface_free(items_inventory_surface);
 
-//Status Effects
+//Status Effects 
+//Oh the horror
 global.status_drawinglist = ds_list_create();
 ds_list_clear(global.status_drawinglist);
 
@@ -103,6 +104,7 @@ global.status_timer_psishroom = -1;
 global.status_timer_buffshroom = -1;
 global.status_timer_greenjuice = -1;
 global.status_timer_buffveg = -1;
+global.status_timer_magnetshroom = -1;
 
 //Drawing Popups
 global.popup_y_offset = 0;

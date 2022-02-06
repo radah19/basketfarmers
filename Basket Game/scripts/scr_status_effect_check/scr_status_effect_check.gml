@@ -166,6 +166,15 @@ function scr_status_effect_check(argument0, argument1, argument2, argument3){
 					ds_list_add(global.status_drawinglist, argument2);
 				}
 				break;
+				
+			case 18:
+				if(global.status_timer_magnetshroom >= 0){
+					global.status_timer_magnetshroom = argument3 - (global.item_strangevial * 20) + (global.item_enhancedtastebuds * 180);
+				} else {
+					global.status_timer_magnetshroom = argument3 - (global.item_strangevial * 20) + (global.item_enhancedtastebuds * 180);
+					ds_list_add(global.status_drawinglist, argument2);
+				}
+				break;
 		}
 	} else {
 		return false;	

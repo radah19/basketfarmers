@@ -53,7 +53,7 @@ function scr_shopitem_list(){
 	scr_addshopitemindex(shop_item_index.strange_vial, "Strange Vial", "Decreases Time of Fungus Effects", 3);
 	global.item_strangevial = 0;
 	
-	scr_addshopitemindex(shop_item_index.heavy_ton, "Heavy Ton", "Increases Gravity by 1", 1);
+	scr_addshopitemindex(shop_item_index.heavy_ton, "Heavy Ton", "Increases Gravity by 1 and Acceleration by 0.025", 1);
 	global.item_heavyton = 0;
 	
 	scr_addshopitemindex(shop_item_index.speed_boot, "Speed Boot", "Increases Speed by 1", 2);

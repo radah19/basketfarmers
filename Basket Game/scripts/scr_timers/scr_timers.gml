@@ -198,6 +198,15 @@ if(global.status_timer_buffveg == 0){
 	scr_delete_status_effect(17);
 }
 
+//Magnet Shroom
+if(global.status_timer_magnetshroom >= 0){
+	global.status_timer_magnetshroom--;
+}
+
+if(global.status_timer_magnetshroom == 0){
+	scr_delete_status_effect(18);
+}
+
 }
 
 
