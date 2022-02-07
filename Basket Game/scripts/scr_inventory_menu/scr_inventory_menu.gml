@@ -233,7 +233,9 @@ function scr_print_inventory_text(argument0, argument1){
 				point_string = " Points - ";
 			}
 			draw_text_ext(15, 162 + 8, string(ds_grid_get(global.item_index, argument0, fruit_item_stat.stat_point_gain)) + point_string + string(ds_grid_get(global.item_index, argument0, fruit_item_stat.stat_type)), font_get_size(fn_popuptext), 271);
-			draw_text_ext(15, 162 + 16, string(ds_grid_get(global.item_index, argument0, fruit_item_stat.description)), font_get_size(fn_popuptext), 271);
+			if(scr_show_bonus(argument0) != "") draw_text_ext(15, 162 + 16, string(scr_show_bonus(argument0)) + " Bonus", font_get_size(fn_popuptext), 271);
+			else draw_text_ext(15, 162 + 16, "No Bonuses", font_get_size(fn_popuptext), 271);
+			draw_text_ext(15, 162 + 24, string(ds_grid_get(global.item_index, argument0, fruit_item_stat.description)), font_get_size(fn_popuptext), 271);
 			break;
 			
 		case 2:

@@ -40,12 +40,31 @@ function scr_popupshopstuff(argument0, argument1, argument2){
 			
 			draw_set_color(c_white);
 			
-			draw_text_ext(argument0 + 19, argument1 + 41, ds_grid_get(global.item_index, global.pair1, fruit_item_stat.stat_point_gain), 67, 67);
-			draw_text_ext(argument0 + 19 + 32, argument1 + 41, ds_grid_get(global.item_index, global.pair1b, fruit_item_stat.stat_point_gain), 67, 67);
-			draw_text_ext(argument0 + 99, argument1 + 41, ds_grid_get(global.item_index, global.pair2, fruit_item_stat.stat_point_gain), 67, 67);
-			draw_text_ext(argument0 + 99 + 32, argument1 + 41, ds_grid_get(global.item_index, global.pair2b, fruit_item_stat.stat_point_gain), 67, 67);
-			draw_text_ext(argument0 + 179, argument1 + 41, ds_grid_get(global.item_index, global.pair3, fruit_item_stat.stat_point_gain), 67, 67);
-			draw_text_ext(argument0 + 179 + 32, argument1 + 41, ds_grid_get(global.item_index, global.pair3b, fruit_item_stat.stat_point_gain), 67, 67);
+			//Show Point Values
+			draw_text_ext(argument0 + 19, argument1 + 41, 
+			string(ds_grid_get(global.item_index, global.pair1, fruit_item_stat.stat_point_gain))
+			+ string(scr_show_bonus(global.pair1)) , 
+			67, 67);
+			draw_text_ext(argument0 + 19 + 32, argument1 + 41, 
+			string(ds_grid_get(global.item_index, global.pair1b, fruit_item_stat.stat_point_gain))
+			+ string(scr_show_bonus(global.pair1b)) 
+			, 67, 67);
+			draw_text_ext(argument0 + 99, argument1 + 41, 
+			string(ds_grid_get(global.item_index, global.pair2, fruit_item_stat.stat_point_gain))
+			+ string(scr_show_bonus(global.pair2)) 
+			, 67, 67);
+			draw_text_ext(argument0 + 99 + 32, argument1 + 41, 
+			string(ds_grid_get(global.item_index, global.pair2b, fruit_item_stat.stat_point_gain))
+			+ string(scr_show_bonus(global.pair2b)) 
+			, 67, 67);
+			draw_text_ext(argument0 + 179, argument1 + 41, 
+			string(ds_grid_get(global.item_index, global.pair3, fruit_item_stat.stat_point_gain))
+			+ string(scr_show_bonus(global.pair3)) 
+			, 67, 67);
+			draw_text_ext(argument0 + 179 + 32, argument1 + 41, 
+			string(ds_grid_get(global.item_index, global.pair3b, fruit_item_stat.stat_point_gain))
+			+ string(scr_show_bonus(global.pair3b)) 
+			, 67, 67);
 			
 			if(keyboard_check_pressed(vk_right)) && (global.selection_box_y != 1){
 				if(global.selection_box_x >= 2){

@@ -196,3 +196,57 @@ function scr_check_fruit(argument0){
 	instance_destroy();
 	
 }
+
+function scr_show_bonus(argument0){
+	var point_check = 0;
+	
+	//Check Type
+	switch(ds_grid_get(global.item_index, argument0, fruit_item_stat.stat_type)){
+		
+		//Fruits
+		case "Fruit":
+			point_check = round( (point_check + (global.item_fruitbasket * 2)));
+			break;	
+			
+		//Vegetables
+		case "Vegetable":
+			point_check = round( (point_check + (global.item_vegetablebasket * 2)));
+			break;
+			
+		//Berries
+		case "Berry":
+			point_check = point_check + scr_berry_check(argument0) + (global.item_berrybasket * 2);
+			break;
+			
+		//Stars
+		case "Star":
+			point_check = point_check + (global.item_starfury * 2);
+			break;
+			
+		//Fungus
+		case "Fungus":
+			point_check = round((point_check + (global.item_fungusbasket * 4)));
+			break;
+			
+		//Rotten
+		case "Rotten":
+			point_check = point_check + (global.item_rottenbasket * 3);
+			break;
+			
+		//Other
+		case "Other":
+			point_check = point_check + (global.item_trashbucket * 2);
+			break;
+			
+		//None
+		default:
+			break;
+	}	
+	
+	if(point_check != 0){
+		if(point_check < 0) return "" + string(point_check);
+		else return "+" + string(point_check);
+	} else {
+		return "";	
+	}
+}

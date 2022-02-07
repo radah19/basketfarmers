@@ -56,7 +56,7 @@ function scr_item_list(){
 	scr_additemindex(fruit_item_index.pear,  "Pear", "Gives 1 Point, Falls Slower", "Fruit", 1, B_GRAV - 1, 0.025, false, false, 0, 1);
 	scr_additemindex(fruit_item_index.watermelon,  "Watermelon", "Gives 4 Points, explodes if it hits the ground", "Fruit", 4, B_GRAV, 0.08, true, false, 0, 3);
 	scr_additemindex(fruit_item_index.pineapple,  "Pineapple", "Gives 6 Points, decreases time on pickup (0.3 seconds)", "Fruit", 6, B_GRAV, B_ACC, false, true, 20, 1);
-	scr_additemindex(fruit_item_index.lemon,  "Lemon", "Gives amount from -2 to 5", "Fruit", "-2 - 5", B_GRAV, B_ACC, false, false, 0, 2);
+	scr_additemindex(fruit_item_index.lemon,  "Lemon", "Gives amount from -2 to 5", "Fruit", "?", B_GRAV, B_ACC, false, false, 0, 2);
 	scr_additemindex(fruit_item_index.smogenut,  "Smoge Nut", "Releases fumes of smoke as ground collision", "Fruit", 1, B_GRAV - 0.5, B_ACC, true, false, 0, -2);
 	scr_additemindex(fruit_item_index.buffing_fruit,  "Buffing Fruit", "On pickup gives status that increases value of fruits by 35%", "Fruit", 0, B_GRAV, B_ACC, false, false, 0, 3);
 	
@@ -79,7 +79,7 @@ function scr_item_list(){
 	scr_additemindex(fruit_item_index.rotten_pear, "Rotten Pear", "Takes 2 Points, falls slower", "Rotten", -2, B_GRAV - 1, 0.025, false, false, 0, -1);
 	scr_additemindex(fruit_item_index.rotten_buffing_fruit, "Rotten Buffing Fruit", "On pickup gives status that decreases value of fruits by 35%", "Rotten", 0, B_GRAV, B_ACC, false, false, 0, -1);
 	scr_additemindex(fruit_item_index.rotting_leaf, "Rotting Leaf", "Takes 2 Points, falls very slowly", "Rotten", -2, 0.4, 0.01, false, false, 0, 0);
-	scr_additemindex(fruit_item_index.rotten_strawberry, "Mouldy Strawberry", "Points given based on size of List", "Berry", 1, B_GRAV, B_ACC, false, false, 0, -3);
+	scr_additemindex(fruit_item_index.rotten_strawberry, "Mouldy Strawberry", "Points taken based on size of List", "Berry", 1, B_GRAV, B_ACC, false, false, 0, -3);
 	
 	scr_additemindex(fruit_item_index.carrot, "Carrot", "Gives 1 Point", "Vegetable", 1, B_GRAV, B_ACC, false, false, 0, 0);
 	scr_additemindex(fruit_item_index.broccoli, "Broccoli", "Takes 2 Points, increases overall speed by 0.03", "Vegetable", -2, B_GRAV, B_ACC, false, false, 0, 2);
@@ -103,8 +103,8 @@ function scr_item_list(){
 	scr_additemindex(fruit_item_index.buffing_shroom, "Buffing Shroom", "On pickup gives status that increases value of mushrooms by 30%", "Fungus", 0, B_GRAV, B_ACC, false, false, 0, 3);
 	scr_additemindex(fruit_item_index.magnet_shroom, "Magnet Shroom", "On pickup gives status that attracts nearby items to you", "Fungus", -10, B_GRAV, B_ACC, false, false, 0, 4);
 	
-	scr_additemindex(fruit_item_index.dice, "Dice", "Gives amount from 1 to 6", "Other", "1 - 6", B_GRAV, B_ACC, false, false, 0, 4);
-	scr_additemindex(fruit_item_index.mystery_ball, "Mystery Ball", "Gives amount from -4 to 6", "Other", "-4 - 6", B_GRAV, B_ACC, false, false, 0, 2);
+	scr_additemindex(fruit_item_index.dice, "Dice", "Gives amount from 1 to 6", "Other", "?", B_GRAV, B_ACC, false, false, 0, 4);
+	scr_additemindex(fruit_item_index.mystery_ball, "Mystery Ball", "Gives amount from -4 to 6", "Other", "?", B_GRAV, B_ACC, false, false, 0, 2);
 	scr_additemindex(fruit_item_index.knife, "Knife", "Shortens time on pickup by 1.5 seconds", "Other", 0, B_GRAV, B_ACC, false, false, 90, -2); 
 	scr_additemindex(fruit_item_index.bomb, "Bomb", "Shortens time on pickup by 2.5 seconds", "Other", 3, B_GRAV, B_ACC, false, false, 150, -3);
 	scr_additemindex(fruit_item_index.rock, "Rock", "Gives -5, Explodes on collision with ground, pieces hurt too", "Other", -5, B_GRAV, B_ACC, true, false, 0, -3);

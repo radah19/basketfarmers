@@ -6,6 +6,7 @@ if(global.game_started == true){
 			}
 	
 			if(global.farmer_total_time == 0) && (!instance_exists(obj_fruit)) && (global.shop_pause == false) && (global.player_is_ready == false){
+				scr_item_list();
 				global.shop_pause = true;	
 				global.shop_temp_timer = 0;
 				global.update_shop_items = true;
@@ -149,7 +150,11 @@ if(show_debug == true){
 	draw_set_font(fn_debug_text);
 	draw_set_color(c_lime);
 	
-	draw_text(1, 1, "Grav:  " + string(global.fruit_gravity));
-	draw_text(1, 13, "Acc:  " + string(global.fruit_acceleration));
-	draw_text(1, 24, "Spd:  " + string(global.player_speedbonus));
+	draw_text(1, 1, "Grav:  " + string(global.player_grav));
+	draw_text(1, 13, "Acc:  " + string(global.player_acc));
+	draw_text(1, 24, "Spd:  " + string(global.player_spd));
+}
+
+if(keyboard_check_pressed(vk_f2)){
+	global.farmer_total_time = 0;	
 }
