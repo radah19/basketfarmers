@@ -68,19 +68,27 @@ if(global.status_timer_anvilstar > 0){
 }
 
 //Starfury
-if(global.status_timer_starfury >= 0){
-	global.status_timer_starfury--;
-}
+if(global.status_timer_starfury >= 0) global.status_timer_starfury--;
+
 
 if(global.status_timer_starfury == 0){
 	global.star_speed_bonus = 0;
 	scr_delete_status_effect(5);
 }
 
-if(global.status_timer_starfury > 0){
-	global.star_fury_gravity_bonus = 8;
+if(global.status_timer_starfury > 0) global.star_fury_gravity_bonus = 8;
+
+
+//Zealous Star
+if(global.status_timer_buffingstar >= 0) global.status_timer_buffingstar--;
+
+
+if(global.status_timer_buffingstar == 0){
+	scr_delete_status_effect(19);
+	global.star_zealous_bonus = 0;
 }
 
+if(global.status_timer_buffingstar > 0) global.star_zealous_bonus = 3;
 
 //Star Interactions
 if(global.status_timer_anvilstar <= 0){
@@ -98,6 +106,8 @@ if(global.status_timer_speedstar <= 0){
 if(global.status_timer_starfury < 0){
 	global.star_fury_gravity_bonus = 0;
 }
+
+
 
 //Screenwarp Mushroom
 if(global.status_timer_screenwarpmushroom >= 0){
@@ -205,6 +215,42 @@ if(global.status_timer_magnetshroom >= 0){
 
 if(global.status_timer_magnetshroom == 0){
 	scr_delete_status_effect(18);
+}
+
+//Rotten Star
+if(global.status_timer_rottingstar >= 0){
+	global.status_timer_rottingstar--;
+}
+
+if(global.status_timer_rottingstar == 0){
+	scr_delete_status_effect(20);
+}
+
+//Rotten Buff Veg
+if(global.status_timer_rottingbuffingveg >= 0){
+	global.status_timer_rottingbuffingveg--;
+}
+
+if(global.status_timer_rottingbuffingveg == 0){
+	scr_delete_status_effect(21);
+}
+
+//Painkiller
+if(global.status_timer_painkiller >= 0){
+	global.status_timer_painkiller--;
+}
+
+if(global.status_timer_painkiller == 0){
+	scr_delete_status_effect(22);
+}
+
+//Void Sphere
+if(global.status_timer_voidsphere >= 0){
+	global.status_timer_voidsphere--;
+}
+
+if(global.status_timer_voidsphere == 0){
+	scr_delete_status_effect(23);
 }
 
 }

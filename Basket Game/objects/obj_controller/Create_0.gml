@@ -48,6 +48,7 @@ global.star_gravity_bonus = 0;
 global.star_float_bonus = 0;
 global.star_speed_bonus = 0;
 global.star_fury_gravity_bonus = 0;
+global.star_zealous_bonus = 0;
 global.player_spd = 0;
 global.player_acc = 0;
 global.player_grav = 0;
@@ -105,6 +106,11 @@ global.status_timer_buffshroom = -1;
 global.status_timer_greenjuice = -1;
 global.status_timer_buffveg = -1;
 global.status_timer_magnetshroom = -1;
+global.status_timer_buffingstar = -1;
+global.status_timer_rottingstar = -1;
+global.status_timer_rottingbuffingveg = -1;
+global.status_timer_painkiller = -1;
+global.status_timer_voidsphere = -1;
 
 //Drawing Popups
 global.popup_y_offset = 0;

@@ -175,6 +175,51 @@ function scr_status_effect_check(argument0, argument1, argument2, argument3){
 					ds_list_add(global.status_drawinglist, argument2);
 				}
 				break;
+				
+			case 19:
+				if(global.status_timer_buffingstar >= 0){
+					global.status_timer_buffingstar = argument3 + (global.item_starclock * 30) + (global.item_enhancedtastebuds * 180);
+				} else {
+					global.status_timer_buffingstar = argument3 + (global.item_starclock * 30) + (global.item_enhancedtastebuds * 180);
+					ds_list_add(global.status_drawinglist, argument2);
+				}
+				break;
+				
+			case 20:
+				if(global.status_timer_rottingstar >= 0){
+					global.status_timer_rottingstar = argument3 + (global.item_starclock * 30) + (global.item_enhancedtastebuds * 180);
+				} else {
+					global.status_timer_rottingstar = argument3 + (global.item_starclock * 30) + (global.item_enhancedtastebuds * 180);
+					ds_list_add(global.status_drawinglist, argument2);
+				}
+				break;
+				
+			case 21:
+				if(global.status_timer_rottingbuffingveg >= 0){
+					global.status_timer_rottingbuffingveg = argument3 + (global.item_enhancedtastebuds * 180);
+				} else {
+					global.status_timer_rottingbuffingveg = argument3 + (global.item_enhancedtastebuds * 180);
+					ds_list_add(global.status_drawinglist, argument2);
+				}
+				break;
+				
+			case 22:
+				if(global.status_timer_painkiller >= 0){
+					global.status_timer_painkiller = argument3 + (global.item_enhancedtastebuds * 180);
+				} else {
+					global.status_timer_painkiller = argument3 + (global.item_enhancedtastebuds * 180);
+					ds_list_add(global.status_drawinglist, argument2);
+				}
+				break;
+				
+			case 23:
+				if(global.status_timer_voidsphere >= 0){
+					global.status_timer_voidsphere = argument3 + (global.item_enhancedtastebuds * 180);
+				} else {
+					global.status_timer_voidsphere = argument3 + (global.item_enhancedtastebuds * 180);
+					ds_list_add(global.status_drawinglist, argument2);
+				}
+				break;
 		}
 	} else {
 		return false;	

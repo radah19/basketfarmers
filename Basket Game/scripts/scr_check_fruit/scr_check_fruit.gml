@@ -50,11 +50,6 @@ function scr_check_fruit(argument0){
 		if(global.player_speedbonus < 0) global.player_speedbonus = 0;
 	}
 	
-	//Straight Poison
-	if(ds_grid_get(global.item_index, argument0, fruit_item_stat.name) == "Straight Poison"){
-		heartbeat = stop;
-	}
-	
 	//Potato
 	if(ds_grid_get(global.item_index, argument0, fruit_item_stat.name) == "Potato") && (global.farmer_total_time > 0){
 		
@@ -79,24 +74,31 @@ function scr_check_fruit(argument0){
 	}
 	
 	//Status Check	
-	scr_status_effect_check(argument0, "Buffing Fruit", 1, 90);
-	scr_status_effect_check(argument0, "Speed Star", 2, 150);
-	scr_status_effect_check(argument0, "Float Star", 3, 150);
-	scr_status_effect_check(argument0, "Anvil Star", 4, 150);
-	scr_status_effect_check(argument0, "Starfury", 5, 120);
-	scr_status_effect_check(argument0, "Rotten Buffing Fruit", 6, 90);
-	scr_status_effect_check(argument0, "Warp Shroom", 7, 180);
-	scr_status_effect_check(argument0, "Red Shroom", 8, 180);
-	scr_status_effect_check(argument0, "Dark Shroom", 9, 180);
-	scr_status_effect_check(argument0, "Confusion Shroom", 10, 180);
-	scr_status_effect_check(argument0, "Glass Shroom", 11, 180);
-	scr_status_effect_check(argument0, "Illusion Shroom", 12, 180);
-	scr_status_effect_check(argument0, "Rad Shroom", 13, 180);
-	scr_status_effect_check(argument0, "Psi Shroom", 14, 180);
-	scr_status_effect_check(argument0, "Buffing Shroom", 15, 90);
-	scr_status_effect_check(argument0, "Green Juice", 16, 7200);
-	scr_status_effect_check(argument0, "Buffing Vegetable", 17, 90);
-	scr_status_effect_check(argument0, "Magnet Shroom", 18, 120);
+	if(!global.status_timer_painkiller > 0){
+		scr_status_effect_check(argument0, "Buffing Fruit", 1, 120);
+		scr_status_effect_check(argument0, "Speed Star", 2, 150);
+		scr_status_effect_check(argument0, "Float Star", 3, 150);
+		scr_status_effect_check(argument0, "Anvil Star", 4, 150);
+		scr_status_effect_check(argument0, "Starfury", 5, 120);
+		scr_status_effect_check(argument0, "Rotten Buffing Fruit", 6, 120);
+		scr_status_effect_check(argument0, "Warp Shroom", 7, 180);
+		scr_status_effect_check(argument0, "Red Shroom", 8, 180);
+		scr_status_effect_check(argument0, "Dark Shroom", 9, 180);
+		scr_status_effect_check(argument0, "Confusion Shroom", 10, 180);
+		scr_status_effect_check(argument0, "Glass Shroom", 11, 180);
+		scr_status_effect_check(argument0, "Illusion Shroom", 12, 180);
+		scr_status_effect_check(argument0, "Rad Shroom", 13, 180);
+		scr_status_effect_check(argument0, "Psi Shroom", 14, 180);
+		scr_status_effect_check(argument0, "Buffing Shroom", 15, 120);
+		scr_status_effect_check(argument0, "Green Juice", 16, 7200);
+		scr_status_effect_check(argument0, "Buffing Vegetable", 17, 120);
+		scr_status_effect_check(argument0, "Magnet Shroom", 18, 120);
+		scr_status_effect_check(argument0, "Zealous Star", 19, 120);
+		scr_status_effect_check(argument0, "Rotten Star", 20, 150);
+		scr_status_effect_check(argument0, "Rotten Buffing Veggie", 21, 120);
+		scr_status_effect_check(argument0, "Painkiller", 22, 120);
+		scr_status_effect_check(argument0, "Void Berry", 23, 120);
+	}
 
 	
 	//Check Type
@@ -115,8 +117,11 @@ function scr_check_fruit(argument0){
 		//Vegetables
 		case "Vegetable":
 			var temp_buffveg_extra = 1;
+			var temp_rottenbuffingveg_extra = 1;
 			if(global.status_timer_buffveg > 0) temp_buffveg_extra = 1.35;
-			point_check = round( (point_check + (global.item_vegetablebasket * 2)) * temp_buffveg_extra );
+			if(global.status_timer_rottingbuffingveg > 0) temp_rottenbuffingveg_extra = 0.65;
+			
+			point_check = round( (point_check + (global.item_vegetablebasket * 2)) * temp_buffveg_extra * temp_rottenbuffingveg_extra);
 			break;
 			
 		//Berries
@@ -189,6 +194,18 @@ function scr_check_fruit(argument0){
 		}
 	}
 	
+	//Specialist Item Checks
+	if(global.status_timer_buffingstar > 0){
+		point_check = round(point_check * 1.3);	
+	}
+	
+	if(global.status_timer_rottingstar > 0){
+		point_check = round(point_check * 0.5);	
+	}
+	
+	if(global.status_timer_voidsphere > 0){
+		point_check *= -1;	
+	}
 	
 	//Add Final Score
 	global.farmer_score += point_check;
@@ -196,6 +213,9 @@ function scr_check_fruit(argument0){
 	instance_destroy();
 	
 }
+
+
+
 
 function scr_show_bonus(argument0){
 	var point_check = 0;
@@ -225,7 +245,7 @@ function scr_show_bonus(argument0){
 			
 		//Fungus
 		case "Fungus":
-			point_check = round((point_check + (global.item_fungusbasket * 4)));
+			point_check = round((point_check + (global.item_fungusbasket * 3)));
 			break;
 			
 		//Rotten

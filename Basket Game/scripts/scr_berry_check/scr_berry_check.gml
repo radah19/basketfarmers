@@ -25,19 +25,25 @@ function scr_berry_check(argument0){
 
 			case fruit_item_index.speed_berry:
 				if(global.status_timer_speedstar > 0){
-					temp_berry_check = 6;
+					temp_berry_check = 5;
 				}
 				break;
 				
 			case fruit_item_index.floating_berry:
 				if(global.status_timer_floatstar > 0){
-					temp_berry_check = 6;
+					temp_berry_check = 5;
 				}
 				break; 
 				
 			case fruit_item_index.anvil_berry:
 				if(global.status_timer_anvilstar > 0){
-					temp_berry_check = 6;
+					temp_berry_check = 5;
+				}
+				break;
+			
+			case fruit_item_index.zealous_berry:
+				if(global.status_timer_buffingstar > 0){
+					temp_berry_check = 4;
 				}
 				break;
 			

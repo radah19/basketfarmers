@@ -41,7 +41,7 @@ function scr_shopitem_list(){
 	scr_addshopitemindex(shop_item_index.rotten_basket, "Rotten Basket", "Increases value of Rotten Fruits by 3", 1);
 	global.item_rottenbasket = 0;
 	
-	scr_addshopitemindex(shop_item_index.fungus_basket, "Fungus Basket", "Increases value of Fungus by 4", 2);
+	scr_addshopitemindex(shop_item_index.fungus_basket, "Fungus Basket", "Increases value of Fungus by 3", 2);
 	global.item_fungusbasket = 0;
 	
 	scr_addshopitemindex(shop_item_index.trash_bucket, "Trash Bucket", "Increases value of Pickups labelled 'Other' by 2", 2);
