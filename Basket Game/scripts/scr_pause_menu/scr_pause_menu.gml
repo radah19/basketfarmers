@@ -56,6 +56,9 @@ draw_sprite_ext(spr_menuscreen, 0, 0, 0, 1, 1, 0, c_white, 1);
 				break;
 				
 			case 3:
+				if(global.shop_pause == false) && (global.player_is_ready == true){
+					scr_savegame();	
+				}
 				game_restart();
 				break;
 				

@@ -1,8 +1,10 @@
 /// @description scr_add_item_inventory(item_ID);
 /// @function scr_add_item_inventory
 /// @param item_ID
+/// @param add_items
 
-function scr_add_item_inventory(argument0){
+function scr_add_item_inventory(argument0, argument1){
+	var add_items = argument1;
 	switch(argument0){
 		case shop_item_index.fruit_basket:
 			global.item_fruitbasket++;
@@ -14,7 +16,7 @@ function scr_add_item_inventory(argument0){
 			
 		case shop_item_index.counter:
 			global.item_counter++;
-			ds_list_add(global.list, fruit_item_index.golden_coin);
+			if(add_items) ds_list_add(global.list, fruit_item_index.golden_coin);
 			break;
 			
 		case shop_item_index.berry_basket:
@@ -23,7 +25,7 @@ function scr_add_item_inventory(argument0){
 			
 		case shop_item_index.starfury:
 			global.item_starfury++;
-			ds_list_add(global.list, fruit_item_index.starfury);
+			if(add_items) ds_list_add(global.list, fruit_item_index.starfury);
 			break;
 			
 		case shop_item_index.rotten_basket:
@@ -40,7 +42,7 @@ function scr_add_item_inventory(argument0){
 			
 		case shop_item_index.pepper_token:
 			global.item_peppertoken++;
-			ds_list_add(global.list, fruit_item_index.red_pepper);
+			if(add_items) ds_list_add(global.list, fruit_item_index.red_pepper);
 			break;
 			
 		case shop_item_index.strange_vial:
@@ -57,9 +59,11 @@ function scr_add_item_inventory(argument0){
 			
 		case shop_item_index.devil_deal:
 			global.item_devildeal++;
-			ds_list_add(global.list, fruit_item_index.knife);
-			ds_list_add(global.list, fruit_item_index.knife);
-			ds_list_add(global.list, fruit_item_index.knife);
+			if(add_items){
+				ds_list_add(global.list, fruit_item_index.knife);
+				ds_list_add(global.list, fruit_item_index.knife);
+				ds_list_add(global.list, fruit_item_index.knife);
+			}
 			break;
 			
 		case shop_item_index.brick_boots:
@@ -84,9 +88,11 @@ function scr_add_item_inventory(argument0){
 			
 		case shop_item_index.mystery_box:
 			global.item_mysterybox++;
-			ds_list_add(global.list, irandom_range(1, fruit_item_index.total - 1));
-			ds_list_add(global.list, irandom_range(1, fruit_item_index.total - 1));
-			ds_list_add(global.list, irandom_range(1, fruit_item_index.total - 1));
+			if(add_items){
+				ds_list_add(global.list, irandom_range(1, fruit_item_index.total - 1));
+				ds_list_add(global.list, irandom_range(1, fruit_item_index.total - 1));
+				ds_list_add(global.list, irandom_range(1, fruit_item_index.total - 1));
+			}
 			break;
 			
 		case shop_item_index.orange_token:

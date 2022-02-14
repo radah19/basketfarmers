@@ -47,6 +47,7 @@ function scr_characterselect_menu(){
 	draw_text_ext(73, 110,ds_grid_get(global.character_index, selection, character_stat.description), font_get_size(fn_popuptext), 170);
 	
 	if(keyboard_check_pressed(vk_space)){
+		obj_controller.character_being_played = selection;
 		global.fruit_acceleration = ds_grid_get(global.character_index, selection, character_stat.stat_acc);
 		global.fruit_gravity = ds_grid_get(global.character_index, selection, character_stat.stat_grav);
 		global.player_speedbonus = ds_grid_get(global.character_index, selection, character_stat.stat_spd);
@@ -61,7 +62,7 @@ function scr_characterselect_menu(){
 		
 		switch(selection){
 			case character_index.f_skeleton:
-				scr_add_item_inventory(irandom_range(1, ds_grid_width(global.shop_item_index) - 1));
+				scr_add_item_inventory(irandom_range(1, ds_grid_width(global.shop_item_index) - 1), true);
 				break;
 				
 			case character_index.f_ohgodno:

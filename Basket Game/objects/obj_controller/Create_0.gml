@@ -13,6 +13,7 @@ surface_color = c_white;
 selection = 0;
 options_toggle = false;
 show_debug = false;
+character_being_played = 0;
 
 // 0 - Unpause, 1 - Pause, 2 - Inventory, 3 - Settings
 global.pause = 0;
@@ -32,7 +33,7 @@ global.shop_temp_timer = 3;
 global.farmer_score = 0;
 global.farmer_cash = 0;
 
-rent_arr = [75, 100, 150, 200, 250, 350, 500, 600, 750, 800, 850, 900, 1000];
+rent_arr = [75, 100, 125, 150, 200, 250, 350, 500, 600, 750, 800, 850, 900, 1000];
 rent_counter = 0;
 global.farmer_rent = rent_arr[rent_counter];
 

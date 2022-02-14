@@ -158,3 +158,7 @@ if(show_debug == true){
 if(keyboard_check_pressed(vk_f2)){
 	global.farmer_total_time = 0;	
 }
+
+if(keyboard_check_pressed(vk_f3)){
+	global.farmer_cash += 5000;	
+}

@@ -194,23 +194,23 @@ function scr_popupshopstuff(argument0, argument1, argument2){
 						case false:
 							switch(global.selection_box_x){
 								case 0:
-									scr_add_item_inventory(global.shop_item1);
+									scr_add_item_inventory(global.shop_item1, true);
 									break;
 							
 								case 1:
-									scr_add_item_inventory(global.shop_item2);
+									scr_add_item_inventory(global.shop_item2, true);
 									break;
 							
 								case 2:
-									scr_add_item_inventory(global.shop_item3);
+									scr_add_item_inventory(global.shop_item3, true);
 									break;
 							}
 							break;
 							
 						case true:
-							scr_add_item_inventory(global.shop_item1);
-							scr_add_item_inventory(global.shop_item2);
-							scr_add_item_inventory(global.shop_item3);
+							scr_add_item_inventory(global.shop_item1, true);
+							scr_add_item_inventory(global.shop_item2, true);
+							scr_add_item_inventory(global.shop_item3, true);
 							break;
 					}
 				}
