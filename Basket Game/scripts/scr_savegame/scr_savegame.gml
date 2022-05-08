@@ -5,6 +5,7 @@ function scr_savegame(){
 	ini_write_real("Player Stats", "ItemList Size", ds_list_size(global.list));
 	ini_write_real("Player Stats", "ShopItemList Size", ds_list_size(global.farmer_inventory));
 	ini_write_real("Player Stats", "Date", global.farmer_date);
+	ini_write_real("Player Stats", "Days", global.farmer_days_passed);
 	ini_write_real("Player Stats", "Cash", global.farmer_cash);
 	ini_write_real("Player Stats", "Score", global.farmer_score);
 	ini_write_real("Player Stats", "Rent", global.farmer_rent);
@@ -27,6 +28,7 @@ function scr_loadgame(){
 	obj_controller.character_being_played = ini_read_real("Player Stats", "Character", 0);
 	scr_loadcharacter(obj_controller.character_being_played);
 	global.farmer_date = ini_read_real("Player Stats", "Date", -1);
+	global.farmer_days_passed = ini_read_real("Player Stats", "Days", 0);
 	global.farmer_cash = ini_read_real("Player Stats", "Cash", 0);
 	global.farmer_score = ini_read_real("Player Stats", "Score", 0);
 	global.farmer_rent =  ini_read_real("Player Stats", "Rent", 0);

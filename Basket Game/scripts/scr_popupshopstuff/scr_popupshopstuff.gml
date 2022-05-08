@@ -106,6 +106,7 @@ function scr_popupshopstuff(argument0, argument1, argument2){
 					}
 					//Do Nothing
 				} else {
+				
 					switch(global.var_ohgodno){
 						case false:
 							switch(global.selection_box_x){

@@ -40,6 +40,7 @@ global.farmer_rent = rent_arr[rent_counter];
 global.farmer_max_time = 10 * room_speed;
 global.farmer_total_time = 0;
 global.farmer_date = -1;
+global.farmer_days_passed = 0;
 
 //Stats
 global.fruit_gravity = 0;
@@ -112,6 +113,9 @@ global.status_timer_rottingstar = -1;
 global.status_timer_rottingbuffingveg = -1;
 global.status_timer_painkiller = -1;
 global.status_timer_voidsphere = -1;
+global.status_timer_tablet = -1;
+global.status_timer_probiotic = -1;
+global.status_timer_yumyumpill = -1;
 
 //Drawing Popups
 global.popup_y_offset = 0;

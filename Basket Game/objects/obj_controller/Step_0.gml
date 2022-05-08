@@ -4,7 +4,8 @@ if(global.pause == 0){
 	
 	global.player_grav = global.fruit_gravity + global.star_gravity_bonus + global.star_float_bonus + global.item_heavyton 
 							+ (global.item_brickboots * 2) + (global.star_fury_gravity_bonus * 0.5) - global.item_floaty
-							+ (global.item_radiated_compost) + (global.item_strange_pill * 2.5) + global.star_zealous_bonus;
+							+ (global.item_radiated_compost) + (global.item_strange_pill * 2.5) + global.star_zealous_bonus
+							- (global.status_timer_probiotic > 0 ? 4 : 0);
 							
 	global.player_acc = global.fruit_acceleration + (global.item_radiated_compost * 0.035) + (global.item_heavyton * 0.025);
 		
@@ -61,9 +62,11 @@ if(global.pause == 0){
 	}
 	
 	if(global.tierlist_create == true){
-		var rando_1 = irandom_range(0, 4);
-		var rando_2 = irandom_range(0, 4);
-		var rando_3 = irandom_range(0, 4);
+		var rando_max = 4;
+		
+		var rando_1 = irandom_range(0, rando_max);
+		var rando_2 = irandom_range(0, rando_max);
+		var rando_3 = irandom_range(0, rando_max);
 		
 		global.pair1 = scr_popupfruit(rando_1);
 		global.pair1b = scr_popupfruit(rando_1 * -1);

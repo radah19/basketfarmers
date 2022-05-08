@@ -3,7 +3,8 @@ if(global.game_started == true){
 if(global.shop_pause == false){
 	var h_input = keyboard_check(vk_right) - keyboard_check(vk_left);
 	global.player_spd = round((base_player_spd + global.player_speedbonus + global.star_speed_bonus + global.item_speedboot
-								+ (global.item_brickboots * 3) + global.star_fury_gravity_bonus)
+								+ (global.item_brickboots * 3) + global.star_fury_gravity_bonus - (global.item_watch * 2)
+								+ (global.status_timer_tablet > 0 ? 6 : 0) + (global.status_timer_yumyumpill > 0 ? 5 : 0))
 								* slowdown_bonus_egg * slowdown_bonus_flower);
 	if(global.player_spd < 0){
 		global.player_spd = 0;	
@@ -22,11 +23,11 @@ if(global.shop_pause == false){
 			x += h_input * global.player_spd;
 	}
 
-	if(place_meeting(x, y, obj_flower)) slowdown_bonus_flower = 0.66;
+	if(place_meeting(x, y, obj_flower)) slowdown_bonus_flower = 0.49;
 	else slowdown_bonus_flower = 1;	
 
 	
-	if(place_meeting(x, y + 1, obj_yolk)) slowdown_bonus_egg = 0.49;
+	if(place_meeting(x, y + 1, obj_yolk)) slowdown_bonus_egg = 0.22;
 	else slowdown_bonus_egg = 1;	
 	
 

@@ -253,6 +253,33 @@ if(global.status_timer_voidsphere == 0){
 	scr_delete_status_effect(23);
 }
 
+//Tablet
+if(global.status_timer_tablet >= 0){
+	global.status_timer_tablet--;
+}
+
+if(global.status_timer_tablet == 0){
+	scr_delete_status_effect(24);
+}
+
+//Probiotic
+if(global.status_timer_probiotic >= 0){
+	global.status_timer_probiotic--;
+}
+
+if(global.status_timer_probiotic == 0){
+	scr_delete_status_effect(25);
+}
+
+//Yum yum Pill
+if(global.status_timer_yumyumpill >= 0){
+	global.status_timer_yumyumpill--;
+}
+
+if(global.status_timer_yumyumpill == 0){
+	scr_delete_status_effect(26);
+}
+
 }
 
 

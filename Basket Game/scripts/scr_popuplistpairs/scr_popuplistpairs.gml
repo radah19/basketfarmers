@@ -92,6 +92,7 @@ function scr_popuplistpairs(argument0, argument1){
 					}
 					//Do Nothing
 				} else {
+				
 					switch(global.var_ohgodno){
 						case false:
 							switch(global.selection_box_x){
@@ -121,6 +122,7 @@ function scr_popuplistpairs(argument0, argument1){
 							ds_list_add(global.list, global.pair3b);
 							break;
 					}
+					
 				}
 				
 				global.selection_box_y = 0;

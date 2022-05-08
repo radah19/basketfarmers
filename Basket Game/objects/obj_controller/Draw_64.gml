@@ -52,9 +52,14 @@ if(global.game_started == true){
 				if(global.farmer_date == -1){
 					scr_popupbox("Show Message", 0, "Welcome to Basket Farmers! \nUse Left and Right Keys to Move Around, Space to Select / Enter \nMake Sure to have enough Money for Rent every 3 days!");
 				} else if(global.farmer_date == -2) {
-					scr_popupbox("Show Game Over", 0, "You were unable to pay Rent on time, Game Over! \nPress Space to go to Start Screen");
+					scr_popupbox("Show Game Over", 0, "You were unable to pay Rent on time, Game Over! \n\nYour final score: " 
+														+ global.farmer_score + " \nDays Lasted: " + global.farmer_days_passed
+														+ " \n\nPress Space to go back to the main menu");
+					
+					
 				} else if(global.farmer_date mod 3 == 0) {	
-					scr_popupbox("Show Rent and Shop", global.shop_temp_timer, "Rent was paid! Your Rent now is " + string(global.farmer_rent) + "\nPress Space to Continue");
+					scr_popupbox("Show Rent and Shop", global.shop_temp_timer, "Rent was paid! Your Rent now is " 
+														+ string(global.farmer_rent) + "\nPress Space to Continue");
 				}  else {
 					scr_popupbox("Show List Pairs", 1, "Hi , I am default message :)");
 				}
@@ -80,6 +85,7 @@ if(global.game_started == true){
 					global.space_temp_timer = -1;
 					global.farmer_total_time = global.farmer_max_time + (global.item_watch * 90);
 					global.farmer_date++;
+					global.farmer_days_passed++;
 					if(global.farmer_date < 1){
 						global.farmer_date++;
 					}

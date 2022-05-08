@@ -61,16 +61,13 @@ function scr_check_fruit(argument0){
 			} else {
 				global.farmer_total_time -= time_removal_p;		
 			}
-		} else if(time_removal_p < 0) {
+		} else {
 			if((time_removal_p * -1) + global.farmer_total_time > global.farmer_max_time + (global.item_watch * 90)){
 				global.farmer_total_time = global.farmer_max_time + (global.item_watch * 90);
 			} else {
 				global.farmer_total_time -= time_removal_p;		
 			}
-		} else {
-			//Do nothing
-		}
-			
+		}	
 	}
 	
 	//Status Check	
@@ -98,6 +95,9 @@ function scr_check_fruit(argument0){
 		scr_status_effect_check(argument0, "Rotten Buffing Veggie", 21, 120);
 		scr_status_effect_check(argument0, "Painkiller", 22, 120);
 		scr_status_effect_check(argument0, "Void Berry", 23, 120);
+		scr_status_effect_check(argument0, "Tablet", 24, 150);
+		scr_status_effect_check(argument0, "Probiotic", 25, 150);
+		scr_status_effect_check(argument0, "Yum Yum Pill", 26, 150);
 	}
 
 	

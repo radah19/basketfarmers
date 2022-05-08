@@ -116,8 +116,13 @@ if(ground_effect == true){
 					}
 					instance_destroy();
 				break;
-			
-			default:
+				
+			case "Matryoshka":
+				scr_explode_into_pieces(fruit_item_index.matryoshka2, 1, 0);
+				break;
+				
+			case "Matryoshka 2":
+				if(grav > 0) scr_explode_into_pieces(fruit_item_index.matryoshka3, 1, 0);
 				break;
 				
 			}

@@ -25,7 +25,7 @@ function scr_shopitem_list(){
 	scr_addshopitemindex(shop_item_index.fruit_basket, "Fruit Basket", "Increases value of Fruits by 2", 1);
 	global.item_fruitbasket = 0;
 	
-	scr_addshopitemindex(shop_item_index.vegetable_basket, "Vegetable Basket", "Increases value of Vegetables by 2", 1);
+	scr_addshopitemindex(shop_item_index.vegetable_basket, "Vegetable Basket", "Increases value of Vegetables by 2 (A lot of the vegetables added in this game are actually fruit, whoops)", 1);
 	global.item_vegetablebasket = 0;
 	
 	scr_addshopitemindex(shop_item_index.counter, "Counter", "Increases counter value by 1, Adds Gold Coin to List" + " - " + string(ds_grid_get(global.item_index, fruit_item_index.golden_coin, fruit_item_stat.description)), 2);
@@ -98,7 +98,7 @@ function scr_shopitem_list(){
 	scr_addshopitemindex(shop_item_index.radiated_compost, "Radiated Compost", "Increases overall Gravity and Acceleration, also makes pickups increase in size as they fall", 4);
 	global.item_radiated_compost = 0;
 	
-	scr_addshopitemindex(shop_item_index.watch, "Watch", "Increases max time you have by 1.5 Seconds", 4);
+	scr_addshopitemindex(shop_item_index.watch, "Watch", "Increases max time you have by 1.5 Seconds but decreases Speed by 2", 4);
 	global.item_watch = 0;
 	
 	scr_addshopitemindex(shop_item_index.fungus_clock, "Fungus Clock", "Picking up Fungus has a chance to Increase Time", 3);

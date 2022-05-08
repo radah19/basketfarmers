@@ -20,7 +20,7 @@ function scr_berry_check(argument0){
 				break;
 			
 			case fruit_item_index.blueberry: //Blueberry - SPD and GRAV
-				temp_berry_check = round( (global.player_grav + (global.player_spd - 4))/4 );
+				temp_berry_check = round( (global.player_grav + (global.player_spd - 3))/2 );
 				break;
 
 			case fruit_item_index.speed_berry:

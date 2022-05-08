@@ -220,6 +220,33 @@ function scr_status_effect_check(argument0, argument1, argument2, argument3){
 					ds_list_add(global.status_drawinglist, argument2);
 				}
 				break;
+				
+			case 24:
+				if(global.status_timer_tablet >= 0){
+					global.status_timer_tablet = argument3 + (global.item_enhancedtastebuds * 180);
+				} else {
+					global.status_timer_tablet = argument3 + (global.item_enhancedtastebuds * 180);
+					ds_list_add(global.status_drawinglist, argument2);
+				}
+				break;	
+				
+			case 25:
+				if(global.status_timer_probiotic >= 0){
+					global.status_timer_probiotic = argument3 + (global.item_enhancedtastebuds * 180);
+				} else {
+					global.status_timer_probiotic = argument3 + (global.item_enhancedtastebuds * 180);
+					ds_list_add(global.status_drawinglist, argument2);
+				}
+				break;	
+				
+			case 26:
+				if(global.status_timer_yumyumpill >= 0){
+					global.status_timer_yumyumpill = argument3 + (global.item_enhancedtastebuds * 180);
+				} else {
+					global.status_timer_yumyumpill = argument3 + (global.item_enhancedtastebuds * 180);
+					ds_list_add(global.status_drawinglist, argument2);
+				}
+				break;	
 		}
 	} else {
 		return false;	
