@@ -26,7 +26,7 @@ function scr_item_list(){
 		watermelon_piece, kernel, rock_piece, egg_shell, emptynaut,
 		//Mutant
 		merganaut, chaos_shroom, green_juice, actual_pepper, 
-		ultra_mega_party_box, unknowntablet,
+		ultra_mega_party_box,
 		//Void
 		void_sphere,
 		
