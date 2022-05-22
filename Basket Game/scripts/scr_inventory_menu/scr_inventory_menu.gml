@@ -166,8 +166,10 @@ function scr_inventory_menu(){
 				} else {
 					inventory_current_row = 1;
 					inven_x_offset = 0;
-					inven_y_offset = ds_list_size(global.list) div 18;
-					inven_node_reader = (ds_list_size(global.list) div 18) * 18;
+					//Check if list size is full (wish i added comments sooner)
+					var siz = ds_list_size(global.list) mod 18 == 0 ? ds_list_size(global.list) div 18 - 1 : ds_list_size(global.list) div 18;
+					inven_y_offset = siz;
+					inven_node_reader = siz * 18;
 				}
 				
 				break;	
@@ -184,7 +186,8 @@ function scr_inventory_menu(){
 				break;
 			
 			case 1:
-				if(inven_node_reader div 18 == ds_list_size(global.list) div 18){
+				if( inven_node_reader div 18 == ds_list_size(global.list) div 18
+				|| (ds_list_size(global.list) mod 18 == 0 && inven_node_reader div 18 + 1 == ds_list_size(global.list) div 18)){ //Check list full
 					if(ds_list_size(global.farmer_inventory) > 0){
 						inventory_current_row = 2;
 						inven_x_offset = 0;
