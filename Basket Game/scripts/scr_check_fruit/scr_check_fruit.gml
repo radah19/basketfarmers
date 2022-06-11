@@ -16,7 +16,7 @@ function scr_check_fruit(argument0){
 	
 	//Broccoli
 	if(ds_grid_get(global.item_index, argument0, fruit_item_stat.name) == "Broccoli"){
-		global.player_speedbonus += 0.03;
+		global.player_speedbonus += 0.03 + (0.03 * global.item_hijo);
 	}
 	
 	//Dice
@@ -34,9 +34,10 @@ function scr_check_fruit(argument0){
 		global.farmer_counter++;
 	}
 	
-	//Skull
-	if(ds_grid_get(global.item_index, argument0, fruit_item_stat.name) == "Skull"){
-		global.fruit_gravity += 0.05;
+	//Skull & Crystal Skull Shard
+	if(ds_grid_get(global.item_index, argument0, fruit_item_stat.name) == "Skull" ||
+		ds_grid_get(global.item_index, argument0, fruit_item_stat.name) == "Shard"){
+		global.fruit_gravity += 0.05 + (0.05 * global.item_hijo);
 	}
 	
 	//Chaos Shroom
@@ -167,24 +168,20 @@ function scr_check_fruit(argument0){
 	}
 	
 	//Add Time Removal
+	var time_removal = ds_grid_get(global.item_index, argument0, fruit_item_stat.stat_timechange)
+	time_removal += time_removal*(global.item_warped_clock*0.5);
+	
 	if(ds_grid_get(global.item_index, argument0, fruit_item_stat.stat_timechange) > 0) && (global.farmer_total_time > 0){
-			var time_removal = ds_grid_get(global.item_index, argument0, fruit_item_stat.stat_timechange);
-			
-			if(time_removal > global.farmer_total_time){
-				global.farmer_total_time = 0;
-			} else {
-				global.farmer_total_time -= time_removal;		
-			}
+			if(time_removal > global.farmer_total_time) global.farmer_total_time = 0;
+			else global.farmer_total_time -= time_removal;		
 		}
-		
+	
+	//Time Addition
 	if(ds_grid_get(global.item_index, argument0, fruit_item_stat.stat_timechange) < 0) && (global.farmer_total_time > 0){
-			var time_removal = ds_grid_get(global.item_index, argument0, fruit_item_stat.stat_timechange);
-			
-			if((time_removal * -1) + global.farmer_total_time > global.farmer_max_time + (global.item_watch * 90)){
+			if((time_removal * -1) + global.farmer_total_time > global.farmer_max_time + (global.item_watch * 90))
 				global.farmer_total_time = global.farmer_max_time + (global.item_watch * 90);
-			} else {
+			else 
 				global.farmer_total_time -= time_removal;		
-			}
 		}
 		
 	//Items

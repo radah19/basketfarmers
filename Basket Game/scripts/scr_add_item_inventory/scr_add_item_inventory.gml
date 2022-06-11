@@ -126,6 +126,18 @@ function scr_add_item_inventory(argument0, argument1){
 		case shop_item_index.fungus_clock:
 			global.item_fungus_clock++;
 			break;
+			
+		case shop_item_index.warped_clock:
+			global.item_warped_clock++;
+			break;
+			
+		case shop_item_index.magic_scythe:
+			global.item_magic_scythe++;
+			break;
+			
+		case shop_item_index.hijo:
+			global.item_hijo++;
+			break;
 		
 	}
 	

@@ -3,7 +3,7 @@
 /// @param item_ID
 /// @param amn_pieces
 function scr_explode_into_pieces(argument0, argument1, argument2){
-	for(var i = 0; i < argument1; i++){
+	for(var i = 0; i < argument1 + global.item_magic_scythe; i++){
 		var fruit_piece = instance_create_depth(x, y, depth, obj_fruit);	
 		fruit_piece.what_fruit_am_i = argument0;
 		fruit_piece.image_index = argument0;

@@ -5,7 +5,8 @@ function scr_shopitem_list(){
 		fruit_basket, vegetable_basket, counter, berry_basket, starfury, rotten_basket, fungus_basket,
 		trash_bucket, pepper_token, strange_vial, heavy_ton, speed_boot, devil_deal, brick_boots, 
 		star_clock, enhanced_taste_buds, eyeball, fertilizer, mystery_box, orange_token, extra_basket,
-		top, strange_pill, floaty, radiated_compost, watch, fungus_clock,
+		top, strange_pill, floaty, radiated_compost, watch, fungus_clock, warped_clock, magic_scythe,
+		hijo,
 		total
 	}
 	
@@ -103,6 +104,16 @@ function scr_shopitem_list(){
 	
 	scr_addshopitemindex(shop_item_index.fungus_clock, "Fungus Clock", "Picking up Fungus has a chance to Increase Time", 3);
 	global.item_fungus_clock = 0;
+	
+	scr_addshopitemindex(shop_item_index.warped_clock, "Warped Clock", "Items that change the amount of time left work 50% better", 3);
+	global.item_warped_clock = 0;
+	
+	scr_addshopitemindex(shop_item_index.magic_scythe, "Magic Scythe", "Items that release items on collision with the ground release 1 more \n"
+																		+ "Example: Watermelons drop 1 more watermelon piece", 4);
+	global.item_magic_scythe = 0;
+	
+	scr_addshopitemindex(shop_item_index.hijo, "Hijo", "Stat influencing items have more potency (by 50%)", 2);
+	global.item_hijo = 0;
 	
 }
 

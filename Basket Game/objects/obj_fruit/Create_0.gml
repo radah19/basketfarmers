@@ -58,3 +58,4 @@ if(global.item_peppertoken > 0){
 
 image_xscale = 1 + (global.item_strange_pill * 0.5);
 image_yscale = 1 + (global.item_strange_pill * 0.5);
+

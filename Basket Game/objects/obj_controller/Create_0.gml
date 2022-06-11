@@ -197,9 +197,10 @@ scr_makeshoptierlist(4);
 
 //Characters
 scr_characterindex();
-
 global.var_ohgodno = false;
 
+//Off Screen Fruit
+global.offscreen_list = ds_list_create();
 
 
 
