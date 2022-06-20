@@ -4,8 +4,8 @@ if(global.shop_pause == false){
 	var h_input = keyboard_check(vk_right) - keyboard_check(vk_left);
 	global.player_spd = round((base_player_spd + global.player_speedbonus + global.star_speed_bonus + global.item_speedboot
 								+ (global.item_brickboots * 3) + global.star_fury_gravity_bonus - (global.item_watch * 2)
-								+ (global.status_timer_tablet > 0 ? 6 : 0) + (global.status_timer_yumyumpill > 0 ? 5 : 0))
-								* slowdown_bonus_egg * slowdown_bonus_flower);
+								+ (global.status_timer_tablet > 0 ? 5 : 0) + (global.status_timer_yumyumpill > 0 ? 4 : 0))
+								* slowdown_bonus_egg * slowdown_bonus_flower) - (global.status_timer_negtablet > 0 ? 4 : 0);
 	if(global.player_spd < 0){
 		global.player_spd = 0;	
 	}

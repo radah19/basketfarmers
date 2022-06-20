@@ -59,7 +59,7 @@ if(global.game_started == true){
 					
 				} else if(global.farmer_date mod 3 == 0) {	
 					scr_popupbox("Show Rent and Shop", global.shop_temp_timer, "Rent was paid! Your Rent now is " 
-														+ string(global.farmer_rent) + "\nPress Space to Continue");
+														+ string(global.farmer_rent) + "\nPress Space to Continue"); 
 				}  else {
 					scr_popupbox("Show List Pairs", 1, "Hi , I am default message :)");
 				}
@@ -74,6 +74,7 @@ if(global.game_started == true){
 				draw_text(10, 5, "Gravity:  " + string(global.player_grav));
 				draw_text(10, 15, "Acceleration:  " + string(global.player_acc));
 				draw_text(10, 25, "Speed:  " + string(global.player_spd));
+				draw_text(10, 35, "Tier:  " + string(rando_max));
 				
 		
 				if(global.space_temp_timer > 0){
@@ -86,9 +87,10 @@ if(global.game_started == true){
 					global.farmer_total_time = global.farmer_max_time + (global.item_watch * 90);
 					global.farmer_date++;
 					global.farmer_days_passed++;
-					if(global.farmer_date < 1){
-						global.farmer_date++;
-					}
+					if(global.farmer_date < 1) global.farmer_date++;
+					if(global.farmer_date mod 3 == 0) 
+						if(rando_max < 4) rando_max += (rando_max == 1) ? 2 : 1;
+					
 			
 					if(global.item_extrabasket > 0){
 						for(var i = 0; i < global.item_extrabasket; i++){

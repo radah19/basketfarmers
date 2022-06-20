@@ -13,6 +13,8 @@ function scr_popupshopstuff(argument0, argument1, argument2){
 				global.popup_canselect = false;
 				global.popup_y_offset = 240;
 				global.shop_temp_timer++;
+				if(rando_max < 4) rando_max += (rando_max == 1) ? 2 : 1;
+				if(shop_rando_max < 4) shop_rando_max++;
 			}
 	 }
 	 

@@ -141,6 +141,18 @@ function scr_inventory_string_num(argument0, argument1, argument2, argument3, ar
 		case shop_item_index.fungus_clock:
 			temp = global.item_fungus_clock;
 			break;
+			
+		case shop_item_index.warped_clock:
+			temp = global.item_warped_clock;
+			break;
+	
+		case shop_item_index.magic_scythe:
+			temp = global.item_magic_scythe;
+			break;
+	
+		case shop_item_index.hijo:
+			temp = global.item_hijo;
+			break;	
 	}
 	
 	if(argument4 == 0){

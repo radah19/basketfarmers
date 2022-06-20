@@ -259,6 +259,7 @@ if(global.status_timer_tablet >= 0){
 }
 
 if(global.status_timer_tablet == 0){
+	scr_status_effect_check(0, "None", 27, 150);
 	scr_delete_status_effect(24);
 }
 
@@ -278,6 +279,15 @@ if(global.status_timer_yumyumpill >= 0){
 
 if(global.status_timer_yumyumpill == 0){
 	scr_delete_status_effect(26);
+}
+
+//Yum yum Pill
+if(global.status_timer_negtablet >= 0){
+	global.status_timer_negtablet--;
+}
+
+if(global.status_timer_negtablet == 0){
+	scr_delete_status_effect(27);
 }
 
 }

@@ -125,6 +125,10 @@ if(ground_effect == true){
 				if(grav > 0) scr_explode_into_pieces(fruit_item_index.matryoshka3, 1, 0);
 				break;
 				
+			case "Crystal Skull":
+				scr_explode_into_pieces(fruit_item_index.shard, 3, 0);
+				break;	
+				
 			}
 	}
 }

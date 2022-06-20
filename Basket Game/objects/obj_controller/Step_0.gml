@@ -62,8 +62,7 @@ if(global.pause == 0){
 	}
 	
 	if(global.tierlist_create == true){
-		var rando_max = 4;
-		
+
 		var rando_1 = irandom_range(0, rando_max);
 		var rando_2 = irandom_range(0, rando_max);
 		var rando_3 = irandom_range(0, rando_max);

@@ -14,6 +14,8 @@ selection = 0;
 options_toggle = false;
 show_debug = false;
 character_being_played = 0;
+rando_max = 1;
+shop_rando_max = 1;
 
 // 0 - Unpause, 1 - Pause, 2 - Inventory, 3 - Settings
 global.pause = 0;
@@ -116,6 +118,7 @@ global.status_timer_voidsphere = -1;
 global.status_timer_tablet = -1;
 global.status_timer_probiotic = -1;
 global.status_timer_yumyumpill = -1;
+global.status_timer_negtablet = -1;
 
 //Drawing Popups
 global.popup_y_offset = 0;

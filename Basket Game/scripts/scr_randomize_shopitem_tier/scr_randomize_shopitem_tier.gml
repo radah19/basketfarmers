@@ -6,15 +6,44 @@ function scr_randomize_shopitem_tier(){
 	var temp_var3 = 0;
 	var rando = 0;
 	
-	
-	if(temp_var <= 55){
-		temp_var2 = 1;	
-	} else if(temp_var <= 80){
-		temp_var2 = 2;
-	} else if(temp_var <= 95){
-		temp_var2 = 3;
-	} else if(temp_var > 95){
-		temp_var2 = 4;
+	switch(shop_rando_max){
+		case 1:
+			temp_var2 = 1;
+			break;
+			
+		case 2:
+			if(temp_var <= 75){
+				temp_var2 = 1;	
+			} else if(temp_var <= 95){
+				temp_var2 = 2;
+			} else if(temp_var > 95){
+				temp_var2 = 3;
+			}
+			break;
+			
+		case 3:
+			if(temp_var <= 60){
+				temp_var2 = 1;	
+			} else if(temp_var <= 80){
+				temp_var2 = 2;
+			} else if(temp_var <= 98){
+				temp_var2 = 3;
+			} else if(temp_var > 98){
+				temp_var2 = 4;
+			}
+			break;
+			
+		case 4:
+			if(temp_var <= 55){
+				temp_var2 = 1;	
+			} else if(temp_var <= 80){
+				temp_var2 = 2;
+			} else if(temp_var <= 95){
+				temp_var2 = 3;
+			} else if(temp_var > 95){
+				temp_var2 = 4;
+			}
+			break;
 	}
 	
 	switch(temp_var2){

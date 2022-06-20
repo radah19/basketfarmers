@@ -24,7 +24,7 @@ function scr_item_list(){
 		golden_coin, leaf, skull, little_man, smiley_face, bullet, party_box, painkiller,
 		matryoshka, matryoshka2, matryoshka3, tablet, probiotic, yumyumpill, crystal_skull,
 		//Bullet
-		watermelon_piece, kernel, rock_piece, egg_shell, emptynaut, shard,
+		watermelon_piece, kernel, rock_piece, egg_shell, shard, emptynaut,
 		//Mutant
 		merganaut, chaos_shroom, green_juice, actual_pepper, 
 		ultra_mega_party_box,
@@ -123,7 +123,7 @@ function scr_item_list(){
 	scr_additemindex(fruit_item_index.seed, "Seed", "Collision with ground causes Flower to spawn, slows speed", "Other", 0, B_GRAV, B_ACC, true, false, 0, -2);
 	scr_additemindex(fruit_item_index.egg, "Egg", "Collision with ground causes Yolk to spawn, slows speed", "Other", 1, B_GRAV, B_ACC, true, false, 0, -4);
 	scr_additemindex(fruit_item_index.grey_clock, "Grey Clock", "Decreases time by a second on pickup", "Other", 0, B_GRAV, B_ACC, false, false, 60, -1);
-	scr_additemindex(fruit_item_index.boot, "Boot", "Falls based on Player Speed, not being picked up Subtracts 2 points", "Other", 4, B_GRAV, B_ACC, true, false, 0, -4);
+	scr_additemindex(fruit_item_index.boot, "Boot", "Falls based on Player Speed, not being picked up Subtracts 3 points", "Other", 4, B_GRAV, B_ACC, true, false, 0, -4);
 	scr_additemindex(fruit_item_index.golden_coin, "Golden Coin", "Picking up 3 Coins gives 6 points times the amount of counters you hold", "Other", 1, B_GRAV, B_ACC, false, false, 0, 100);
 	scr_additemindex(fruit_item_index.leaf, "Leaf", "Gives 1 Point, falls very slowly", "Other", 1, 0.4, 0.01, false, false, 0, 0);
 	scr_additemindex(fruit_item_index.skull, "Skull", "Increases overall gravity by 0.05 on pickup", "Other", -1, B_GRAV, B_ACC, false, false, 0, -2);
@@ -135,24 +135,24 @@ function scr_item_list(){
 	scr_additemindex(fruit_item_index.matryoshka, "Matryoshka", "Bursts into a matryoshka worth more points (1 -> 3 -> 5) if not picked up", "Other", 1, B_GRAV, B_ACC, true, false, 0, 2);
 	scr_additemindex(fruit_item_index.matryoshka2, "Matryoshka 2", "Bursts into a matryoshka worth more points (3 -> 5) if not picked up", "Other", 3, -3, B_ACC, true, false, 0, 5);
 	scr_additemindex(fruit_item_index.matryoshka3, "Matryoshka 3", "Small :)", "Other", 5, -3, B_ACC, false, false, 0, 5);
-	scr_additemindex(fruit_item_index.tablet, "Tablet", "Gives a temporary increase of speed as well as a random negative status", "Other", 0, B_GRAV, B_ACC, false, false, 0, 3);
+	scr_additemindex(fruit_item_index.tablet, "Tablet", "Gives a temporary increase of speed and a decrease after", "Other", 0, B_GRAV, B_ACC, false, false, 0, 3);
 	scr_additemindex(fruit_item_index.probiotic, "Probiotic", "Takes 4 points and give a temporary gravity decrease", "Other", -4, B_GRAV, B_ACC, false, false, 0, 3);
 	scr_additemindex(fruit_item_index.yumyumpill, "Yum Yum Pill", "Gives a temporary increase in speed", "Other", -2, B_GRAV + 2, B_ACC + 0.02, false, false, 0, 3);
-	scr_additemindex(fruit_item_index.crystal_skull, "Crystal Skull", "Explodes on collision with ground, pieces increase gravity by 0.05", "Other", 0, B_GRAV + 1, B_ACC, true, false, 0, -3);
+	scr_additemindex(fruit_item_index.crystal_skull, "Crystal Skull", "Explodes on collision with ground, pieces increase gravity by 0.05", "Other", 0, B_GRAV + 0.5, B_ACC, true, false, 0, -4);
 	
 	scr_additemindex(fruit_item_index.watermelon_piece, "Watermelon Piece", "", "Fruit", 1, -3, B_ACC, false, false, 0, 100);
 	scr_additemindex(fruit_item_index.kernel, "Kernel Piece", "", "Vegetable", 1, -3, B_ACC, false, false, 0, 100);
 	scr_additemindex(fruit_item_index.rock_piece, "Rock Piece", "", "Other", -1, -3, B_ACC, false, false, 0, 100);
 	scr_additemindex(fruit_item_index.egg_shell, "Egg Shell", "", "Other", -1, -3, B_ACC, false, false, 0, 100);
 	scr_additemindex(fruit_item_index.emptynaut, "Emptynaut", "Just an empty husk", "Other", 0, -3, B_ACC, false, true, 0, 100);
-	scr_additemindex(fruit_item_index.shard, "Shard", "Increase rgavity by 0.05 on pickup, unlucky if you rolled this", "Other", 0, -2.5, B_ACC, false, false, 0, 100);
+	scr_additemindex(fruit_item_index.shard, "Shard", "Increase gravity by 0.05 on pickup, unlucky if you rolled this", "Other", 0, -2.5, B_ACC, false, false, 0, 100);
 	
 	scr_additemindex(fruit_item_index.merganaut, "Merganaut", "Explodes when it hits the ground, potentially replicating itself in the process", "Vegetable", 0, -3, B_ACC, true, false, 0, 5);
-	scr_additemindex(fruit_item_index.chaos_shroom, "Chaos Shroom", "On Pickup randomly Increases / Decreases Stats", "Fungus", 4, B_GRAV, B_ACC, false, true, 0, 5);
-	scr_additemindex(fruit_item_index.green_juice, "Green Juice", "Yum :)", "Other", 1, B_GRAV - 2, B_ACC, false, false, 0, 5);
-	scr_additemindex(fruit_item_index.actual_pepper, "Actual Pepper", "Peppers are fruit", "Fruit", 1, B_GRAV, B_ACC, false, false, 0, 5);
+	scr_additemindex(fruit_item_index.chaos_shroom, "Chaos Shroom", "On Pickup randomly Increases / Decreases Stats", "Fungus", 4, B_GRAV, B_ACC, false, true, 0, 100);
+	scr_additemindex(fruit_item_index.green_juice, "Green Juice", "Yum :)", "Other", 1, B_GRAV - 2, B_ACC, false, false, 0, 100);
+	scr_additemindex(fruit_item_index.actual_pepper, "Actual Pepper", "Peppers are fruit", "Fruit", 1, B_GRAV, B_ACC, false, false, 0, 100);
 	scr_additemindex(fruit_item_index.ultra_mega_party_box, "ULTRA MEGA PARTY BOX", ":D :D :D :D :D", "Other", -20, B_GRAV - 1, B_ACC, true, false, 0, 5);
 	
-	scr_additemindex(fruit_item_index.void_sphere, "Void Berry", "Gives status that multiplies the value of items by -1", "Void", 0, B_GRAV, B_ACC, false, false, 0, 5);
+	scr_additemindex(fruit_item_index.void_sphere, "Void Berry", "Gives status that multiplies the value of items by -1", "Void", 0, B_GRAV, B_ACC, false, false, 0, 100);
 	
 }

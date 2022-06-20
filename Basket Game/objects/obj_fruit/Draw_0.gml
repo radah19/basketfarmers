@@ -18,17 +18,26 @@ if(global.status_timer_radshroom > 0){
 }
 
 //Off Screen Elements
+var offscreen_y = (y < -2 && global.farmer_total_time <= 0) ? 10 : y;
+
 if(x < -2){
 	draw_set_alpha(0.3);
-	draw_circle(10, y, 7.5, true);
-	draw_sprite(spr_fruit, what_fruit_am_i, 10, y);
+	draw_circle(10, offscreen_y, 7.5, true);
+	draw_sprite(spr_fruit, what_fruit_am_i, 10, offscreen_y);
 	draw_set_alpha(1);
 }
 	
 if(x > room_width + 2){
 	draw_set_alpha(0.3);
-	draw_circle(room_width - 10, y, 7.5, true);
-	draw_sprite(spr_fruit, what_fruit_am_i, room_width - 10, y);
+	draw_circle(room_width - 10, offscreen_y, 7.5, true);
+	draw_sprite(spr_fruit, what_fruit_am_i, room_width - 10, offscreen_y);
+	draw_set_alpha(1);
+}
+
+if(y < -2 && global.farmer_total_time <= 0 && (x > 0)){
+	draw_set_alpha(0.3);
+	draw_circle(x, 10, 7.5, true);
+	draw_sprite(spr_fruit, what_fruit_am_i, x, 10);
 	draw_set_alpha(1);
 }
 
