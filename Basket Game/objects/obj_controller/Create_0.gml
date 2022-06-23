@@ -1,4 +1,5 @@
-randomize();
+global.camera_zoom = 3;
+window_set_size(room_width * global.camera_zoom, room_height * global.camera_zoom);
 
 global.game_started = false;
 
@@ -16,6 +17,8 @@ show_debug = false;
 character_being_played = 0;
 rando_max = 1;
 shop_rando_max = 1;
+
+randomize();
 
 // 0 - Unpause, 1 - Pause, 2 - Inventory, 3 - Settings
 global.pause = 0;
@@ -201,10 +204,6 @@ scr_makeshoptierlist(4);
 //Characters
 scr_characterindex();
 global.var_ohgodno = false;
-
-//Off Screen Fruit
-global.offscreen_list = ds_list_create();
-
 
 
 

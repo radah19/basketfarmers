@@ -132,7 +132,7 @@ function scr_item_list(){
 	scr_additemindex(fruit_item_index.bullet, "Bullet", "It's coming right for ya !", "Other", -7, 0.02, 0.01, false, false, 0, -2);
 	scr_additemindex(fruit_item_index.party_box, "Party Box", "Bursts into items from your very own inventory! :D", "Other", -10, B_GRAV, B_ACC, true, false, 0, 4);
 	scr_additemindex(fruit_item_index.painkiller, "Painkiller", "Gives status that inhibits the ability to gain other status effects", "Other", 0, B_GRAV, B_ACC, false, false, 0, 2);
-	scr_additemindex(fruit_item_index.matryoshka, "Matryoshka", "Bursts into a matryoshka worth more points (1 -> 3 -> 5) if not picked up", "Other", 1, B_GRAV, B_ACC, true, false, 0, 2);
+	scr_additemindex(fruit_item_index.matryoshka, "Matryoshka", "Bursts into a matryoshka worth more points (1 -> 3 -> 5)", "Other", 1, B_GRAV, B_ACC, true, false, 0, 2);
 	scr_additemindex(fruit_item_index.matryoshka2, "Matryoshka 2", "Bursts into a matryoshka worth more points (3 -> 5) if not picked up", "Other", 3, -3, B_ACC, true, false, 0, 5);
 	scr_additemindex(fruit_item_index.matryoshka3, "Matryoshka 3", "Small :)", "Other", 5, -3, B_ACC, false, false, 0, 5);
 	scr_additemindex(fruit_item_index.tablet, "Tablet", "Gives a temporary increase of speed and a decrease after", "Other", 0, B_GRAV, B_ACC, false, false, 0, 3);
